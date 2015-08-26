@@ -4,7 +4,7 @@
 
 \begin{document}
 % \MYTITLE{Lab 1 \\ Assigned: Thursday, 4 September 2015 \\ Due: Thursday, 11 September 2015, 2:30 pm}
-\MYTITLE{Practical 1\\4--5 September 2015\\Due: September 10, 2015 by the end of class\\``Checkmark'' grade}
+\MYTITLE{Practical 1\\28  August 2015\\Due: September 4, 2015 at the start of class\\``Checkmark'' grade}
 
 % \begin{document}
 % \MYTITLE{Laboratory Assignment One: Version Control with Git and Bitbucket}
@@ -18,6 +18,31 @@ system to manage the files associated with our laboratory and practical assignme
 will learn how to use the Bitbucket service for managing Git repositories and the {\tt git} command-line tool in the
 Ubuntu operating system. After connecting to the course's Git repository and creating your own repository, you will
 compile and run one Java program, capture the program's output, and commit your output to a repository.
+
+\subsection*{General Guidelines}
+
+\begin{itemize}
+  \setlength{\itemsep}{0pt}
+
+  \item {\bf Use the Alden Hall computers.} If you want to work on a different machine, be sure to transfer your
+    programs to the Alden machines and re-run them before submitting. However, please remember that, as stated in the
+    syllabus, students should complete assignments using the specialized workstations in the Alden Hall laboratories;
+    the course instructor and the teaching assistants normally are not available to help students configure their own
+    computers.
+
+  \item {\bf Keep all of your files!} Don't delete your programs and reports after you hand them in---you will need
+    them again later when you study for the quizzes and examinations and work on the other laboratory, practical, and
+    final project assignments.
+
+  \item {\bf Back up your files regularly}. Use a flash drive, Google Drive, or your favorite backup method to keep a
+    copy of your files in reserve. In the event of a system failure, you are responsible for ensuring that you have
+    access to a recent backup copy of all your files.
+
+  \item {\bf Review the Honor Code policy on the syllabus.} Remember that you may discuss programs with others, but
+    copying programs is a violation of the College's Honor Code.
+
+\end{itemize}
+
 
 \section*{Configuring Git and Bitbucket}
 
@@ -34,8 +59,8 @@ outlined in this assignment.
 
   \item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one---make sure
     that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free Bitbucket
-    repositories while you are a student. 
-    
+    repositories while you are a student.
+
   \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
     can use to support your communication with the Bitbucket servers. Follow the prompts to create your keys and save
     them in the default directory (press ``Enter'' after you are promted: ``{\tt Enter file in which to save the key ...
@@ -54,10 +79,8 @@ outlined in this assignment.
     course's Git repository with you.  Open a terminal window on your workstation and change into the directory where
     you will store your files for this course.  For instance, by opening a terminal window and typing the command ``{\tt
     mkdir cs111F2015}'' you could make a {\tt cs111F2015/} directory that will contain the Git repository that the
-    instructor will always use to share files with you.  Once you have done so, please type the following command if you
-    are in {\bf sections 1 and 2} of the course: \\ ``{\tt git clone
-    git@bitbucket.org:janyljumadinova/cs111f2015-share.git}'', \newline {\bf or} the following command if you are in {\bf
-    sections 3 and 4} of the course: \\``{\tt git clone git@bitbucket.org:gkapfham/cs111f2015-share.git}''.  
+    instructor will always use to share files with you.  Once you have done so, please type the following command 
+    ``{\tt git clone git@bitbucket.org:gkapfham/cs111f2015-share.git}''.
 
     If everything worked correctly, you should be able to download all of the files that you will need for this
     practical assignment. Please resolve any problems that you encountered by first reviewing the Bitbucket
@@ -100,7 +123,7 @@ discussing them with your neighbor, a teaching assistant, or one of the course i
     \vspace*{-.1in}
 
     % At this point, you should go into the {\tt cs112s2015-share} repository and use the {\tt cp -r} command to copy the
-    % entire {\tt labs/} directory from the {\tt cs112s2015-share} repository to {\tt cs112S2015-<your user name>}.  
+    % entire {\tt labs/} directory from the {\tt cs112s2015-share} repository to {\tt cs112S2015-<your user name>}.
 
 Once you have changed into this directory you can type the command ``{\tt git init .}''. Then, you can use the ``{\tt
   mkdir practicals}'' command to make a new directory and ``{\tt cd practicals}'' to change into it.  Next, you
@@ -134,14 +157,14 @@ At this point, you can learn more about Git by consulting Web sites like \url{ht
 that you have a basic understanding of the following Git commands:
 
 \vspace*{-.125in}
-\begin{enumerate} 
+\begin{enumerate}
   % \setlength{\itemsep}{-.03in}
   \item {\tt git init}
   \item {\tt git status}
-  \item {\tt git add} 
+  \item {\tt git add}
   \item {\tt git commit}
   \item {\tt git push}
-  \item {\tt git pull} 
+  \item {\tt git pull}
 \end{enumerate}
 \vspace*{-.125in}
 
@@ -172,6 +195,6 @@ assignment's stated deadline.
 
 % After compiling, using, and studying the {\tt Hooray} program, you should complete the same steps for the {\tt
 % Weeee.java} program. Go ahead and compile and run this program.  What output does it produce? Why does it create this
-% output? How is the output similar to and different from that which was created by the {\tt Hooray} program? 
+% output? How is the output similar to and different from that which was created by the {\tt Hooray} program?
 
 \end{document}
