@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Computer Science 111: Introduction to Computer Science 111</title>
+
+        <meta name="description" content="Teaching Slides for Computer Science 111">
+        <meta name="author" content="Gregory M. Kapfhammer">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/night-gkapfham.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow&#45;night&#45;bright.css">         -->
+        <!-- <link rel="stylesheet" href="lib/css/tomorrow&#45;night&#45;bright.css"> -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Install Font Awesome and the Google Web fonts -->
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans' rel='stylesheet' type='text/css'>
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                <section data-background-transition="none" data-background="http://farm4.static.flickr.com/3161/2681686220_1f39f404f4_z.jpg" style="background: rgba(29,31,33,0.9)">
+                    <h1>Computer Science 111:</h1>
+                    <h3>Introduction to Computer Science I</h3>
+                    <h3>Chapter One</h3>
+                    <p>Gregory M. Kapfhammer</p>
+                    <br /><small><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creative commons licensed ( BY-NC-SA )</a> <a title="Thinkin' about the code" href="http://flickr.com/photos/yourdon/2681686220">flickr photo</a> shared by <a href="http://flickr.com/people/yourdon">Ed Yourdon</a></small>
+                </section>
+
+                <section>
+                    <h1>Computer Hardware</h1>
+                    <p class="fragment">Central processing unit (CPU)</p>
+                    <p class="fragment">Input/output devices (I/O) </p>
+                    <p class="fragment">Main memory (MM)</p>
+                    <p class="fragment">Secondary memory devices (SMD)</p>
+                </section>
+
+                <section>
+                    <h1>Categories of Software</h1>
+                    <p class="fragment">Operating systems</p>
+                    <p class="fragment">Applications and apps</p>
+                    <p class="fragment">Graphical user interface</p>
+                    <p class="fragment">Command-line interface</p>
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm5.static.flickr.com/4124/5068845349_4bb9f8fec9.jpg" style="">
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm5.static.flickr.com/4124/5068845349_4bb9f8fec9.jpg" style="background: rgba(29,31,33,0.9)">
+                    <h1>Binary Numbers</h1>
+                    <p class="fragment">We love to use decimal ...</p>
+                    <p class="fragment">... but computers really don't! Why?</p>
+                    <p class="fragment">Bits and bytes</p>
+                    <p class="fragment">Unique numbers in 2-bit binary?</p>
+                    <p class="fragment">What about 3-bit binary?</p>
+<br /><small><a href="http://creativecommons.org/licenses/by-sa/2.0/">creative commons licensed ( BY-SA )</a> <a title="binary bridge" href="http://flickr.com/photos/mcclanahoochie/5068845349">flickr photo</a> shared by <a href="http://flickr.com/people/mcclanahoochie">mcclanahoochie</a></small>
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm5.static.flickr.com/4124/5068845349_4bb9f8fec9.jpg" style="background: rgba(29,31,33,0.9)">
+                    <h1>Bits and Bytes</h1>
+                    <p class="fragment">Main memory is a grid of addresses</p>
+                    <p class="fragment">1 byte = 8 bits</p>
+                    <p class="fragment">1 word = 32 bits = 4 bytes</p>
+                    <p class="fragment">Kilobytes, megabytes, and gigabytes!</p>
+                    <p class="fragment">Volatile versus non-volatile</p>
+                    <p class="fragment">The memory hierarchy</p>
+                    <p class="fragment">Fast/slow, big/small, costly/cheap, close/far</p>
+<br /><small><a href="http://creativecommons.org/licenses/by-sa/2.0/">creative commons licensed ( BY-SA )</a> <a title="binary bridge" href="http://flickr.com/photos/mcclanahoochie/5068845349">flickr photo</a> shared by <a href="http://flickr.com/people/mcclanahoochie">mcclanahoochie</a></small>
+                </section>
+
+                <section>
+                    <h1 id="analog_and_digital">Analog and Digital</h1>
+                    <p class="fragment">Similarities and differences?</p>
+                    <p class="fragment">Concrete examples?</p>
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm5.static.flickr.com/4025/4643247813_3d53d841e0.jpg" style="">
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm5.static.flickr.com/4025/4643247813_3d53d841e0.jpg" style="background: rgba(29,31,33,0.9)">
+                    <h1>Assembly Lines</h1>
+                    <p class="fragment">CPU components and main memory (Fig. 1.13)</p>
+                    <p class="fragment">Fetch-decode-execute cycle</p>
+                    <p class="fragment">Complexity and computation</p>
+                    <p class="fragment">High-level versus low-level</p>
+                    <p class="fragment">What level will we program at?</p>
+<br /><small><a href="http://creativecommons.org/licenses/by/2.0/">creative commons licensed ( BY )</a> <a title="Red Wing Shoes Factory Tour" href="http://flickr.com/photos/94693506@N00/4643247813">flickr photo</a> shared by <a href="http://flickr.com/people/94693506@N00">ninahale</a></small>
+                </section>
+
+                <section>
+                    <h1 id="computer_networks">Computer Networks</h1>
+                    <p class="fragment">Network address</p>
+                    <p class="fragment">Try this command: <code>ifconfig -a</code></p>
+                    <p class="fragment">Local-area and wide-area networks</p>
+                    <p class="fragment">Uniform resource locators</p>
+                    <p class="fragment">Network file system</p>
+                    <p class="fragment">Try this command: <code>mount</code></p>
+                </section>
+
+                <section>
+                    <h1 id="java_programs">Java Programs</h1>
+                    <pre><code data-trim>
+public class Lincoln
+{
+   // prints a presidential quotation
+   public static void main (String[] args)
+   {
+      System.out.println ("A quote by Abraham Lincoln:");
+      System.out.println ("Whatever you are, be a good one.");
+   }
+}
+                    </code>
+                    </pre>
+                    <p class="fragment">Can you find? ... The definition of a class</p>
+                </section>
+
+                <section>
+                    <h1 id="java_programs">Java Programs</h1>
+                    <pre><code data-trim>
+public class Lincoln
+{
+   // prints a presidential quotation
+   public static void main (String[] args)
+   {
+      System.out.println ("A quote by Abraham Lincoln:");
+      System.out.println ("Whatever you are, be a good one.");
+   }
+}
+                    </code>
+                    </pre>
+                    <p class="fragment">Can you find? ... Java keywords</p>
+                </section>
+
+                <section>
+                    <h1 id="java_programs">Java Programs</h1>
+                    <pre><code data-trim>
+public class Lincoln
+{
+   // prints a presidential quotation
+   public static void main (String[] args)
+   {
+      System.out.println ("A quote by Abraham Lincoln:");
+      System.out.println ("Whatever you are, be a good one.");
+   }
+}
+                    </code>
+                    </pre>
+                    <p class="fragment">Can you find? ... A method invocation</p>
+                </section>
+
+                <section>
+                    <h1 id="java_programs">Java Programs</h1>
+                    <pre><code data-trim>
+public class Lincoln
+{
+   // prints a presidential quotation
+   public static void main (String[] args)
+   {
+      System.out.println ("A quote by Abraham Lincoln:");
+      System.out.println ("Whatever you are, be a good one.");
+   }
+}
+                    </code>
+                    </pre>
+                    <p class="fragment">Can you find? ... A character string</p>
+                </section>
+
+                <section>
+                    <h1 id="java_programs">Java Programs</h1>
+                    <pre><code data-trim>
+public class Lincoln
+{
+   // prints a presidential quotation
+   public static void main (String[] args)
+   {
+      System.out.println ("A quote by Abraham Lincoln:");
+      System.out.println ("Whatever you are, be a good one.");
+   }
+}
+                    </code>
+                    </pre>
+                    <p class="fragment">Can you find? ... A single line comment</p>
+                </section>
+
+                <section>
+                    <h1 id="java_programs">Java Programs</h1>
+                    <pre><code data-trim>
+public class Lincoln
+{
+   // prints a presidential quotation
+   public static void main (String[] args)
+   {
+      System.out.println ("A quote by Abraham Lincoln:");
+      System.out.println ("Whatever you are, be a good one.");
+   }
+}
+                    </code>
+                    </pre>
+                    <p class="fragment">Can you find? ... A declared variable</p>
+                </section>
+
+                <section>
+                    <h1 id="java_programs">Formatting Concerns</h1>
+                    <pre><code data-trim>
+public class Lincoln2{public static void main(String[]args){
+System.out.println("A quote by Abraham Lincoln:");
+System.out.println("Whatever you are, be a good one.");}}
+                    </code>
+                    </pre>
+                    <p class="fragment">What is wrong with this program?</p>
+                </section>
+
+                <section>
+                    <pre><code data-trim>
+                              public       class
+     Lincoln3
+   {
+                 public
+   static
+        void
+  main
+        (
+String
+            []
+    args                       ) 
+  {
+  System.out.println        (
+"A quote by Abraham Lincoln:"          )
+  ;        }
+          }
+          </code>
+                    </pre>
+                    <p class="fragment">What is wrong with this program?</p>
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm3.static.flickr.com/2530/4134496930_550fedbc20.jpg" style="">
+                </section>
+
+                <section data-background-transition="none" data-background="http://farm3.static.flickr.com/2530/4134496930_550fedbc20.jpg" style="background: rgba(29,31,33,0.9)">
+                    <h1>Input and Output</h1>
+                    <p class="fragment">Levels of programming languages</p>
+                    <p class="fragment">Editing and running a Java program (Figure 1.20)</p>
+                    <p class="fragment">Compiling and running a Java program (Figure 1.21)</p>
+                    <p class="fragment">Using a modal text editor like GVim</p>
+                    <p class="fragment">Syntax and semantics of programming languages</p>
+<br /><small><a href="http://creativecommons.org/licenses/by-nd/2.0/">creative commons licensed ( BY-ND )</a> <a title="In-N-Out Burger" href="http://flickr.com/photos/loop_oh/4134496930">flickr photo</a> shared by <a href="http://flickr.com/people/loop_oh">loop_oh</a></small>
+                </section>
+
+                <section>
+                    <h1 id="object-oriented_programming">Object-Oriented</h1>
+                    <p class="fragment">The object is a fundamental entity in Java</p>
+                    <p class="fragment">Objects represent real-world entities</p>
+                    <p class="fragment">Let's review the basic terms on page 46!</p>
+                    <p class="fragment">Object, attribute, method, class</p>
+                    <p class="fragment">We will discuss these terms throughout the semester</p>
+                </section>
+
+            </div>
+
+            <script src="lib/js/head.min.js"></script>
+            <script src="js/reveal.min.js"></script>
+
+            <script>
+
+                // Full list of configuration options available here:
+                // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+center: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none/none
+
+// Parallax scrolling
+// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+// parallaxBackgroundSize: '2100px 900px',
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+            });
+
+            </script>
+
+        </body>
+    </html>
