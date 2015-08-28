@@ -57,19 +57,19 @@ outlined in this assignment.
 
 \begin{enumerate}
 
-  \item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one---make sure
+  \item If you do not already have a Bitbucket account, then please go to the Bitbucket Web site and create one---make sure
     that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free Bitbucket
     repositories while you are a student.
 
   \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that you
     can use to support your communication with the Bitbucket servers. Follow the prompts to create your keys and save
-    them in the default directory (press ``Enter'' after you are promted: ``{\tt Enter file in which to save the key ...
+    them in the default directory (press ``Enter'' after you are prompted: ``{\tt Enter file in which to save the key ...
     :}'', then press ``Enter'' twice if you do not wish to create a passphrase at this time or type your selected
     passphrase if you do).   Type {\tt man ssh-keygen} and talk with your partner to learn more about this program.
     What files does {\tt ssh-keygen} produce?  Where does this program store these files by default?
 
-    Once both you and your partner have created your ssh keys, you should raise your hand to invite either a teaching
-    assistant or a course instructor to help you with the next steps. First, you must log into Bitbucket and look in the
+    Once you and your partner have created your ssh keys, you should raise your hand to invite either a teaching
+    assistant or the course instructor to help you with the next steps. First, you must log into Bitbucket and look in the
     right corner for an account avatar with a down arrow.  Click on this blue link and then select the ``Manage
     account'' option. Now, scroll down until you found the ``SSH keys'' option and upload your ssh key to Bitbucket. You
     can copy your SSH key by going to the terminal and typing ``{\tt cat \textasciitilde{}/.ssh/id\_rsa.pub}'' command.
@@ -88,7 +88,7 @@ outlined in this assignment.
       clone}'', then please see the course instructor.
 
   \item Using your terminal window, you should browse the files that are in this Git repository.  In particular, please
-    look in the {\tt cs111f2015-share/practicals/practical01} directory and use {\tt gvim} to study the Java program that
+    look in the {\tt cs111f2015-share/practicals/practical01/} directory and use {\tt gvim} to study the Java program that
     you find.  Remember, the ``{\tt cd}'' command allows you to change into a directory. So, you could type the following
     commands to go to the directory that contains today's Java program; make sure you fully understand these steps!
 
@@ -122,22 +122,23 @@ name>} using the ``{\tt mkdir}'' command in your terminal window. If you opened 
 following commands to create the needed directory; again, make sure that you understand each of these steps, discussing
 them with your neighbor, a teaching assistant, a departmental tutor, or the course instructor if you are confused.
 
-    \vspace*{-.1in}
+    % \vspace*{-.1in}
     \begin{verbatim}
         cd cs111F2015
         mkdir cs111F2015-<your user name>
         cd cs111F2015-<your user name>
     \end{verbatim}
-    \vspace*{-.1in}
+    \vspace*{-.2in}
 
     % At this point, you should go into the {\tt cs112s2015-share} repository and use the {\tt cp -r} command to copy the
     % entire {\tt labs/} directory from the {\tt cs112s2015-share} repository to {\tt cs112S2015-<your user name>}.
 
 Once you have changed into this directory you can type the command ``{\tt git init .}''. Then, you can use the ``{\tt
-  mkdir practicals}'' command to make a new directory and ``{\tt cd practicals}'' to change into it.  Next, you
-should again use the ``{\tt mkdir}'' command to create an additional directory called {\tt practical01}.  Please make
-sure that you completed each of these steps inside of the parent directory called {\tt cs111F2015-<your user name>}; if
-you are stuck, ask a course instructor for help.
+mkdir practicals}'' command to make a new directory and ``{\tt cd practicals}'' to change into it.  Next, you should
+again use the ``{\tt mkdir}'' command to create an additional directory called {\tt practical01}.  Please make sure that
+you completed each of these steps inside of the parent directory called {\tt cs111F2015-<your user name>}; if you are
+stuck, ask the course instructor or a teaching assistant for help. Also, make sure that you review all of the commands
+that you have typed to see if you input them exactly as they are written on this assignment sheet.
 
 After completing this step you should click on the file icon in the upper left corner to load the Ubuntu file browser.
 Once the first window displays, you should click the ``File/New Window'' menu item to load a second graphical file
@@ -146,39 +147,41 @@ window, which we will call the ``source'' window, you should navigate to the {\t
 clicking on the correct folder icons.  Now, please find the {\tt Kinetic.java} file that is stored inside of the {\tt
   cs111f2015-share} repository in the ``source'' window. In the second window, which we will call the ``destination''
 window, you should follow the same process to first navigate to the {\tt cs111F2015-<your user name>} directory,
-ultimately finding the {\tt practical01} directory. Before you move on to the next step, please have a course instructor
+ultimately finding the {\tt practical01/} directory. Before you move on to the next step, please have the course instructor
 or a teaching assistant verify that you have everything set up correctly.
 
 The next step in this practical requires you to use the graphical browser to copy the {\tt Kinetic.java} file from the
 ``source'' browser to the ``destination'' browser, ensuring that the file is transferred from the {\tt cs111f2015-share}
-repository to the {\tt practical01} directory of the {\tt cs111F2015-<your user name>} repository.  Once the files are
-in your own Git repository, please use the {\tt git add} and {\tt git commit} commands to add them correctly. You can learn how to use the {\tt git add} and {\tt git commit} commands in the terminal window by reviewing the ``Git Cheatsheet'', discussing them with teaching assistants and course instructors, or searching on the Internet.
+repository to the {\tt practical01/} directory of the {\tt cs111F2015-<your user name>} repository.  Once the files are
+in your own Git repository, please use the {\tt git add} and {\tt git commit} commands to add them correctly. You can
+learn how to use the {\tt git add} and {\tt git commit} commands in the terminal window by reviewing the ``Git
+Cheatsheet'', discussing them with teaching assistants and course instructor, or searching on the Internet.
 
 Next, you should use the Bitbucket Web site to create a repository that has the same name as the local directory and
 local repository.  You must follow Bitbucket's instructions to push the code and tags in your local repository to the
 remote one. When you are finished with this step, you should see in your Web browser that the Bitbucket servers are
 storing the Java program. Once the Git repository contains the correct files, you should share your Bitbucket repository
-with the course instructor. If you are in sections 1 and 2 your instructor's Bitbucket user name is ``janyljumadinova'' and if you are in sections 3 and 4 your instructor's Bitbucket user name is ``gkapfham''.
+with the course instructor. In this course your instructor's Bitbucket user name is ``gkapfham''.
 
 At this point, you can learn more about Git by consulting Web sites like \url{http://try.github.io/} and
-\url{http://gitimmersion.com/}.  After discussion them with a class member and a teaching assistant, you should ensure
+\url{http://gitimmersion.com/}.  After discussing them with a class member and a teaching assistant, you should ensure
 that you have a basic understanding of the following Git commands:
 
 \vspace*{-.125in}
 \begin{enumerate}
-  % \setlength{\itemsep}{-.03in}
-  \item {\tt git init}
+  \setlength{\itemsep}{-.03in}
+  % \item {\tt git init}
   \item {\tt git status}
   \item {\tt git add}
   \item {\tt git commit}
   \item {\tt git push}
   \item {\tt git pull}
 \end{enumerate}
-\vspace*{-.125in}
+\vspace*{-.15in}
 
 \section*{Compiling, Running, and Understanding a Java Program}
 
-Once you have mastered the basic use of version control, you should return to the \\ {\tt practicals/practical01}
+Once you have mastered the basic use of version control, you should return to the \\ {\tt practicals/practical01/}
 directory---in your version control repository---that contains the Java program. Now, use the Java compiler by typing
 ``{\tt javac Kinetic.java}'' in the terminal window.  Next, you can run this program by typing ``{\tt java Kinetic}'' in
 the terminal window.  What output does this program produce?  Just like in this week's laboratory assignment, you should
@@ -191,7 +194,7 @@ If the equation for kinetic energy, denoted $K$, is $K=\frac{1}{2} \times m \tim
 defect?
 
 Once you have finished studying this Java program, add comments to the source code to explain what it does and how it
-works.  Again just do your best to explain everything that you understood, while ignoring the parts that did not make
+works.  Again, just do your best to explain everything that you understood, while ignoring the parts that did not make
 sense to you.  Most importantly, make sure that a final version of this program is correctly committed to your Git
 version control repository hosted by Bitbucket; you can do this by going to your repository's directory and correctly
 using {\tt git add, git commit}, and {\tt git push} commands. Additionally, please make sure that you commit the output
@@ -200,6 +203,12 @@ pasting it into a {\tt gvim} window, saving the output in a file with an appropr
 git add}, {\tt git commit}, and {\tt git push} commands to store it on Bitbucket.  If you are not able to complete this
 step, then please seek assistance from a teaching assistant or a course instructor so that you can finish by the
 assignment's stated deadline.
+
+Since this is your first practical assignment and you are still learning how to use the appropriate hardware and
+software, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
+about the necessary technology and the background and expertise of the other students in the class, the teaching
+assistants, and the course instructor.
+
 
 % After compiling, using, and studying the {\tt Hooray} program, you should complete the same steps for the {\tt
 % Weeee.java} program. Go ahead and compile and run this program.  What output does it produce? Why does it create this
