@@ -1,9 +1,6 @@
-%!TEX root=cs111F2014-lab02.tex
-% mainfile: cs111F2014-lab02.tex
-
 \input{111pre}
 \begin{document}
-\MYTITLE{Lab 2 for Sections 03 and 04\\11 September 2014\\Due Thursday, 18 September by 2:30 pm}
+\MYTITLE{Lab 2 \\2 September 2015\\Due Wednesday, 9 September by 2:30 pm}
 %\MYHEADERS{Lab 2}{Due 12 Sep, 2pm}
 
 \subsection*{Objectives}
@@ -14,14 +11,17 @@ preparing the lab; write a program to perform a simple calculation.
 \subsection*{General Guidelines for Labs}
 
 \begin{itemize}
+
 \item
 {\bf Work on the Alden Hall computers.} If you want to work on a different
 machine, be sure to transfer your programs to the Alden
 machines and re-run them before submitting.
+
 \item
-{\bf Update your repository often!} You should add, commit, 
-and push your updated files each time you work on them.  I will not grade 
+{\bf Update your repository often!} You should add, commit,
+and push your updated files each time you work on them.  I will not grade
 your programs until the due date has passed.
+
 \item
 {\bf Review the Honor Code policy.} You
 may discuss programs with others, but programs that are nearly identical
@@ -30,8 +30,11 @@ to others will be taken as evidence of violating the Honor Code.
 
 \subsection*{Reading Assignment}
 
-Please review the handout on ``Tips on Using Linux and Gvim'' (available in the shared repository in the ``handouts''
-  directory).  Also review lecture slides and Sections 2.2--2.6 in your textbook.
+Start learning more about the basics of implementing Java programs by reading Sections 1.4 and 1.5 and Sections 2.2
+through 2.6 of your textbook. In addition, please review the slides that we have used during the recent class
+discussions. If you have questions about these reading assignments, please see the course instructor or a teaching
+assistant or departmental tutor during their office hours. Posting a question on Slack is another option for ensuring
+that your concern is resolved.
 
 \subsection*{Create a Program Template}
 
@@ -39,10 +42,10 @@ Every program you write will have header comments, a ``{\tt main}'' method, some
 date, etc. Rather than typing this in every time you have to write a Java program, you are going to create one
 ``template file'' that can be copied into each of your future laboratory files. As we learn more Java, you will be
 making changes to this file to accommodate new features. You will store this template in your directory/repository,
-named {\tt cs111F2014-<your user name>}, that you created during practical 1, making a copy of it for each laboratory
+named {\tt cs111F2015-<your user name>}, that you created during practical 1, making a copy of it for each laboratory
 assignment.
 
-\begin{sloppypar} Go to the {\tt cs111F2014-<your user name>} directory and type the command ``{\tt gvim
+\begin{sloppypar} Go to the {\tt cs111F2015-<your user name>} directory and type the command ``{\tt gvim
   Template.java}''.  Create a Java program template that you can fill in for each laboratory assignment.  See the
   following program for an example of what your template should look like.  Please note that this program will not
   compile and cannot be run.  You only need to create this template file once, thus allowing you to re-use it in the
@@ -53,14 +56,14 @@ future laboratory sessions.  \end{sloppypar}
      //*************************************
      // Honor Code: The work I am submitting is a result of my own thinking and efforts.
      // Your Name \textcolor{red}{\rm\em [Replace with your name]}
-     // CMPSC 111 Fall 2014
+     // CMPSC 111 Fall 2015
      // Lab # \textcolor{red}{\rm\em [When you copy this file, fill in the lab number]}
      // Date: mmm dd yyyy \textcolor{red}{\rm\em [When you copy this file, fill in the date]}
      //
      // Purpose: ... \textcolor{red}{\rm\em [When you copy this file, describe the program]}
-     //*************************************     
+     //*************************************
      import java.util.Date; // needed for printing today's date
-     
+
      public class Xxxxxx \textcolor{red}{\rm\em [When you copy this file, replace with actual file name]}
      \{
          //----------------------------
@@ -70,9 +73,9 @@ future laboratory sessions.  \end{sloppypar}
          \{
             // Label output with name and date:
             System.out.println("Your Name\textbackslash{}nLab #\textbackslash{}n" + new Date() + "\textbackslash{}n");
-     
+
             // Variable dictionary:
-            \textcolor{red}{\rm\em [Declare variables and use comments to explain their meanings]}    
+            \textcolor{red}{\rm\em [Declare variables and use comments to explain their meanings]}
          \}
      \}
 \end{Verbatim}
@@ -80,7 +83,7 @@ future laboratory sessions.  \end{sloppypar}
 \vspace*{-.1in}
 
 \noindent Save this file using the ``File/Save'' menu or by typing ``{\tt :w}'' when you are not in insert mode. At this
-point, your {\tt cs111F2014-<your user name>} directory should contain a file named ``{\tt Template.java}''. You may now
+point, your {\tt cs111F2015-<your user name>} directory should contain a file named ``{\tt Template.java}''. You may now
 close the {\tt gvim} editor. Make sure that you store this file in your Bitbucket repository! If you do not know how to
 transfer the files to Bitbucket, then please review the steps outlined in both the previous practical and laboratory
 assignments and the ``Git Cheatsheet''.
@@ -88,9 +91,9 @@ assignments and the ``Git Cheatsheet''.
 \vspace*{-.1in}
 \subsection*{Create a New Directory}
 
-In your {\tt cs111F2014-<your user name>} directory type the command ``{\tt mkdir lab2}'' to create a new directory for
+In your {\tt cs111F2015-<your user name>} directory type the command ``{\tt mkdir lab2}'' to create a new directory for
 the second laboratory.
-\noindent Type ``{\tt cd lab2}'' to change into this new directory.  
+\noindent Type ``{\tt cd lab2}'' to change into this new directory.
 
 \vspace*{-.1in}
 \subsection*{Write a Java Program to Perform a Simple Calculation}
@@ -100,9 +103,9 @@ up to you, I ask that it be in good taste and suitable for a classroom setting.
 
 \noindent{\bf Creating the File:} Type ``{\tt gvim Lab2.java}''. Inside the {\tt gvim} editor, make sure you are {\em
 not} in insert mode. That is, the word ``{\tt --INSERT--}'' should {\em not} appear in the lower left corner. Then, type
-the following exactly as shown; it will appear in the bottom line of the {\tt gvim} window: 
+the following exactly as shown; it will appear in the bottom line of the {\tt gvim} window:
 
-\begin{center} \verb$:r../Template.java$ \end{center} 
+\begin{center} \verb$:r../Template.java$ \end{center}
 
 This ``reads'' your {\tt Template.java} file into your new {\tt Lab2} program.  You only need to do this once!  Now you
 need to modify {\tt Lab2.java} to include your name, the lab number, date, etc.
@@ -113,7 +116,7 @@ the variable that you chose; for instance, a full example would be ``{\tt int co
 variable after you have declared it, you need to write an assignment statement using an assignment operator `{\tt =}',
 as, for example, ``{\tt count = 0;}''. You may combine the variable declaration and assignment into one statement as in
 ``{\tt int count = 0;}''. You may print variables by incorporating them into a {\tt print} or {\tt println} statement by
-using `{\tt +}' and the name of the variable as in {\tt System.out.println("My first variable is " + count);} 
+using `{\tt +}' and the name of the variable as in {\tt System.out.println("My first variable is " + count);}
 
  Complete the laboratory assignment by writing the Java statements needed to perform several simple arithmetic
  calculations and print the results. See an example below. Obviously, you may not use this example---instead, you should
@@ -121,29 +124,29 @@ using `{\tt +}' and the name of the variable as in {\tt System.out.println("My f
 
 \begin{verbatim}
      /* Honor Code: The work I am submitting is a result of my own thinking and efforts.
-        Janyl Jumadinova
-        CMPSC 111 Fall 2014
+        Gregory M. Kapfhammer
+        CMPSC 111 Fall 2015
         Lab 2
-        Date: September 11, 2014
-        Purpose: to compute and print the number of yards between the Earth and the moon, 
+        Date: September 11, 2015
+        Purpose: to compute and print the number of yards between the Earth and the moon,
         then print lunar maximum and minimum temperatures in both celsius and fahrenheit. */
- 
+
      import java.util.Date; // needed for printing today's date
-     
+
      public class MoonDistance
      {
          // main method: program execution begins here
          public static void main(String[] args)
          {
             // Label output with name and date:
-            System.out.println("Your Name\nLab 2\n" + new Date() + "\n");     
+            System.out.println("Your Name\nLab 2\n" + new Date() + "\n");
             // Variables:
             int milesToMoon = 238900;   // distance to moon in miles
             int ydsPerMile = 1760;      // number of yards in a mile
-            int ydsToMoon;              // number of yards to the moon           
+            int ydsToMoon;              // number of yards to the moon
             // Compute values:
             ydsToMoon = milesToMoon * ydsPerMile;
-            
+
             System.out.println("Distance to the moon in miles: " + milesToMoon);
             System.out.println("The number of yards per mile: " +ydsPerMile);
             System.out.println("The number of yards from the earth");
@@ -169,13 +172,13 @@ Print your name, the lab number, and the current date and time, using
 Declare and use at least three variables (try using variables of different types).
 \item
 Contain at least some variables that are initialized with constant values; others
-should be assigned the results of calculations, as in the previously discussed examples. 
+should be assigned the results of calculations, as in the previously discussed examples.
 \item
 Use at least three of the five arithmetic operators \verb$+$, \verb$-$, \verb$*$,
 \verb$/$, or \verb$%$.
 \item
-% Once their values are known, print the values of all variables, with appropriate labels. 
-Print the values of all variables, once their values are known, with appropriate labels. 
+% Once their values are known, print the values of all variables, with appropriate labels.
+Print the values of all variables, once their values are known, with appropriate labels.
 \end{itemize}
 
 
@@ -203,7 +206,7 @@ In your terminal window, still in the {\tt lab2} directory, type:
 
 \vspace*{-.1in}
 \begin{quote}
-{\tt javac Lab2.java} 
+{\tt javac Lab2.java}
 \end{quote}
 \vspace*{-.1in}
 
@@ -235,19 +238,19 @@ directory properly.  Additionally, students should submit signed and printed ver
 
 \begin{enumerate}
 
-	\item A completed, properly commented and formatted {\tt Lab2.java} program.
+    \item A completed, properly commented and formatted {\tt Lab2.java} program.
 
-        \item The output from running {\tt Lab2} in the terminal window. You may use {\tt gvim} to save your output as
-          follows: using the mouse, select everything from the ``{\tt java Lab2}'' command to the end of your output.
-          Right-click on the selected text and copy it.  Type ``{\tt gvim output}''---note that this {\em not} a Java
-          program!---and use the ``Edit/Paste'' menu item to paste your program's output into the file.  Now, use ``{\tt
-          :w}'' or the ``File/Save'' menu item to save this file.
+    \item The output from running {\tt Lab2} in the terminal window. You may use {\tt gvim} to save your output as
+      follows: using the mouse, select everything from the ``{\tt java Lab2}'' command to the end of your output.
+      Right-click on the selected text and copy it.  Type ``{\tt gvim output}''---note that this {\em not} a Java
+      program!---and use the ``Edit/Paste'' menu item to paste your program's output into the file.  Now, use ``{\tt
+      :w}'' or the ``File/Save'' menu item to save this file.
 
 \end{enumerate}
 
 Share your program and the output file with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt
 git commit}'', and ``{\tt git push}'' commands. When you are done, please ensure that the Bitbucket Web site has
-a {\tt lab2/} directory in your repository with the two files called {\tt Lab2.java} and {\tt output}. You should see 
+a {\tt lab2/} directory in your repository with the two files called {\tt Lab2.java} and {\tt output}. You should see
 the instructor if you have questions about assignment submission.
 
 \end{document}
