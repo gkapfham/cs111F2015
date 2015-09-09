@@ -66,7 +66,8 @@ particular, your program needs to do the following:
   user's input (after picking the correct data type for the percentage, remember to save the user's input into an
   appropriate variable).
 
-\item Calculate the tip as $tip = \frac{percentage}{100} \times bill$ if percentage ranges between $0$ and $100$ or as $tip = percentage \times bill$ if percentage ranges between $0$ and $1$.
+\item Calculate the tip as $tip = \frac{percentage}{100} \times bill$ if the percentage ranges between $0$ and $100$ or
+  as $tip = percentage \times bill$ if the percentage ranges between $0$ and $1$.
 
 \item Calculate the total bill as $total\_bill = bill+tip$
 
@@ -79,7 +80,7 @@ particular, your program needs to do the following:
 
 \item Ask the user how many people will be splitting the total bill (remember to save the user's input into a variable).
 
-\item Calculate each person's share. For example if you saved the number of people splitting the bill into a variable
+\item Calculate each person's share. For example, if you saved the number of people splitting the bill into a variable
   called $numPeople$, then you would calculate each person's share as $share = \frac{total\_bill}{numPeople}$. You
   should think (or rethink) about the data types you are using and whether a data conversion is required at this point
   in your program.
@@ -90,15 +91,16 @@ particular, your program needs to do the following:
 
 \noindent
 A sample run of this program is shown below:
+
 \begin{verbatim}
-      jjumadinova@aldenv5:~/lab3$ javac Lab3.java
-      jjumadinova@aldenv5:~/lab3$ java Lab3
-      Janyl Jumadinova
+      gkapfham@aldenv5:~/lab3$ javac Lab3.java
+      gkapfham@aldenv5:~/lab3$ java Lab3
+      Gregory Kapfhammer
       Lab 3
       Wed Sept 17 13:15:39 EDT 2014
 
-      Please enter your name: Janyl
-      Janyl, welcome to the Tip Calculator!
+      Please enter your name: Timothy
+      Timothy, welcome to the Tip Calculator!
       Please enter the amount of your bill: 50
       Please enter the percentage that you want to tip: 15
       Your original bill was $50
@@ -110,12 +112,12 @@ A sample run of this program is shown below:
 
 \end{verbatim}
 \vspace{-0.2in}
-Some points to remember as your complete this assignment:
+Some points to remember as your complete this laboratory assignment:
 \begin{itemize}
 \item You will need to use the {\tt Scanner} class. Don't forget to import it at the top of your program. You may refer to
-  class examples for code samples demonstrating the use of the {\tt Scanner}.
+  textbook for code samples demonstrating the use of the {\tt Scanner}.
 \item Think carefully about what data type you want to use for your variables.
-\item Your program only needs to have one {\tt main} method.
+\item As in past assignments, your program only needs to have one {\tt main} method.
 \item To display a dollar sign you can just type ``\$'' inside the string of your output statement.
 \item Note that your program will alternate between printing and computing---this
 is okay!
