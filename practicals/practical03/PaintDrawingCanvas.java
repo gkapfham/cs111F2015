@@ -19,14 +19,13 @@ public class PaintDrawingCanvas extends JApplet {
     page.setColor(userColor);
     page.fillRect(0,0,DisplayDrawingCanvas.WIDTH/2, DisplayDrawingCanvas.HEIGHT);
 
-    // calculate the complement of the user's color
-    Color userComplementColor = new Color(255-DisplayDrawingCanvas.redValue,
-        255-DisplayDrawingCanvas.greenValue,
-        255-DisplayDrawingCanvas.blueValue);
+    // calculate the "complementary" color of the provided color
+    Color userComplementaryColor = new Color(255-DisplayDrawingCanvas.redValue,
+          255-DisplayDrawingCanvas.greenValue,
+          255-DisplayDrawingCanvas.blueValue);
 
     // fill the second half (left-to-right) with the complement of the user's color
-    page.setColor(userComplementColor);
+    page.setColor(userComplementaryColor);
     page.fillRect(DisplayDrawingCanvas.WIDTH/2,0,DisplayDrawingCanvas.WIDTH/2, DisplayDrawingCanvas.HEIGHT);
-
   }
 }
