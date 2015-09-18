@@ -2,6 +2,7 @@
 \begin{document}
 \MYTITLE{Practical 3\\18 September 2015\\Due in Bitbucket by midnight of the day of your practical \\ ``Checkmark'' grade}
 
+\vspace*{-.1in}
 \subsection*{Summary}
 
 To practice using interactive programs implemented in the Java programming language. Additionally, to learn more about
@@ -41,8 +42,8 @@ practicals and \mbox{each assignment}.
 
 Please use the {\tt gvim} text editor to carefully study the code in the {\tt DisplayDrawingCanvas.java} file. What are
 the lines in this program that read input from the user and store the input values in variables? How do these lines of
-source code work? Next, find the line of code that creates {\tt JFrame} and modify it so that it correctly prints your
-name and the date. This is the only change that you need to make to this file! Please see the instructor if you do not
+source code work? Next, find the line of code that creates the {\tt JFrame} and modify it so that it prints your name
+and the date. This is the only change that you need to make to this file! Please see the instructor if you do not
 understand the code in this file.
 
 \vspace*{-.1in}
@@ -76,8 +77,15 @@ questions about these steps.
 \vspace*{-.1in}
 \subsection*{Testing Your Finished Program}
 
+Once you think that you have added the necessary lines to the {\tt PaintDrawingCanvas.java} file, you should repeatedly
+test you program to make sure that it is creating the correct graphical output. For instance, if the user inputs the RGB
+value of $(255, 0, 0)$, then what are the colors in the left and right sides of the graphic? To test your program, you
+may want to try several different RGB values that are listed in Figure 2.10 of your textbook. More advanced testing of
+your program is possible by picking an RGB value from one side of the color wheel in {\tt gimp} and then checking that
+your program correctly displays its complement (the one ``across'' the color wheel) in the graphic. Does your testing
+reveal any limitations to our approach to calculating the complementary color?
 
-
+\vspace*{-.1in}
 \subsection*{Using Version Control Correctly}
 
 As you are typing your program in the {\tt gvim} text editor, you should regularly save your files.  Once you have
@@ -95,7 +103,7 @@ DisplayDrawingCanvas.java} and {\tt PaintDrawingCanvas.java} files along with sc
 associated with running the program three times. Please pick RGB values for input to the {\tt DisplayDrawingCanvas}
 program that reveal that your calculation of the complementary color is working as well as is possible.
 
-\vspace*{-.2in}
+\vspace*{-.1in}
 \subsection*{Reminder About the General Guidelines for Practical Sessions}
 
 Since this is one of our first practical assignments and you are still learning how to use the Java programming
@@ -106,15 +114,14 @@ assistants, and the instructor.
 \vspace*{-.05in}
 \begin{itemize}
 
-% \itemsep -0.01in
 \itemsep 0in
 
 \item {\bf Experiment!} Practical sessions are for learning by doing without the pressure of grades or ``right/wrong''
   answers. So try things!  The best way to learn is by intelligently experimenting.
 
 \item {\bf Submit \textbf{\textit{Something}}.} Your grade for this assignment is a ``checkmark'' indicating whether you
-  did or did not complete the work and submit something to the Bitbucket repository using the ``{\tt git add}'', ``{\tt
-    git commit}'', and ``{\tt git push}'' commands.
+  did or did not complete the work and submit something to the Bitbucket-hosted Git repository using the ``{\tt git
+  add}'', ``{\tt git commit}'', and ``{\tt git push}'' commands.
 
 \item {\bf Practice Key Laboratory Skills.} As you are completing this assignment, practice using the {\tt gvim} text
   editor and the Ubuntu terminal until you can easily use their most important features.  Additionally, ask
@@ -126,17 +133,11 @@ assistants, and the instructor.
   should upload a file, even a partially working one, by the end of the class period. So, make sure that you correctly
   upload your file to your Git repository!
 
-  % You also should ensure that, for this assignment and all subsequent assignments, you can confidently upload files to
-  % your Git repository during the practical session.
-
 \item {\bf Help One Another!} If your neighbor is struggling and you know what to do, offer your help. Don't ``do the
   work'' for them, but advise them on what to type or how to handle things. If you are stuck on a part of this practical
   session and you could not find any insights in either your textbook or online sources, formulate an intelligent
   question to ask your neighbor, a teaching assistant, or a course instructor. Try to strike the right balance between
   asking for help when you cannot solve a problem and working independently to find a solution.
-
-\item {\bf Update Your Repository Often!} You should {\tt add}, {\tt commit}, and {\tt push} your updated files each
-  time you work on them, always including descriptive messages about each code change.
 
 \item {\bf Review the Honor Code Policy on the Syllabus.} Remember that while you may discuss programs with other
   students in the course, programs that are nearly identical to, or merely variations on, the work of others will be
