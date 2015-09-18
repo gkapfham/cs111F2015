@@ -7,7 +7,7 @@
 
 To practice using interactive programs implemented in the Java programming language. Additionally, to learn more about
 how to declare variables of different data types and then to change values of these variables using expressions.  To
-also continue to explore how to display graphics using the applet environment provided by Java. Finally, to continue
+also further explore how to display graphics using the applet environment provided by Java. Finally, to continue
 practicing the use of the {\tt git add}, {\tt git commit}, and {\tt git push} commands to upload Java source code and
 graphics to your Git repository.
 
@@ -31,7 +31,7 @@ create a new directory for this assignment. You can run the {\tt gvim} command f
 begin to implement the required Java program. Please see the instructor if you have problems with these preparatory steps.
 
 Now, in the course's ``share'' repository, after you type ``{\tt git pull}'' command, go to the {\tt practical03/}
-directory, where you will find two Java programs: {\tt DisplayDrawingCanvas.java} and {\tt PaintDrawingCanvas.java}.
+directory, where you will find two Java classes: {\tt DisplayDrawingCanvas.java} and {\tt PaintDrawingCanvas.java}.
 Using the graphical file browser or the terminal, copy the {\tt practical03/} directory from the ``share''
 repository to your own {\tt cs111F2015-<your user name>} repository inside the {\tt practicals/} directory. Before you
 move on to the next steps, make sure that your repository is clearly organized with separate directories for labs and
@@ -60,16 +60,16 @@ user inputs the RGB value of $(255,0,0)$, then this region of the graphic should
 second half of the image should be filled with the ``complement'' of the color requested by the user. For example, the
 complement of the red value of $255$ is the value $255-255=0$ and the complement of the green value of $0$ is
 $255-0=255$. Intuitively, taking the complement of an RGB should give you the color that is on the ``opposite'' side of
-the color wheel that you can view in the {\tt gimp} program. So, what is the RGB value of the color red? Does this color
-appear on the opposite side of the color wheel in {\tt gimp}?
+the color wheel that you can view in the {\tt gimp} program. So, what is the RGB value of the color red's complement?
+Does it appear on the opposite side of the color wheel?
 
 As a means of practicing the use of variables and expressions, and the creation of graphics in Java, you should make
 some small additions to this program so that it fulfills its intended purpose. To accomplish this task, the first thing
 that you must do is add a call to the {\tt page.fillRect} method so that it paints a rectangle of the color requested by
 the user. Next, you should store in the variable called {\tt userComplementaryColor} a color that is the complement of
 the one requested by the user. This means that you will have to write in the form of a Java expression the simple
-equations that were intuitively explained in the previous paragraph. Now, the source code line {\tt
-page.setColor(userComplementaryColor);} will cause the next shape to be filled with the complement of the color chosen
+equations that were intuitively explained in the previous paragraph. Now, the source code line ``{\tt
+page.setColor(userComplementaryColor);}'' will cause the next shape to be filled with the complement of the color chosen
 by the user. Finally, you will need to again call the {\tt page.fillRect} method with the parameters that will yield a
 rectangle correctly drawn in the second half of the image. Please see the instructor or a teaching assistant if you have
 questions about these steps.
@@ -114,7 +114,7 @@ program that reveal that your calculation of the complementary color is working 
 Since this is one of our first practical assignments and you are still learning how to use the Java programming
 language, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
 about the necessary technology and the background and expertise of the other students in the class, the teaching
-assistants, and the instructor.
+assistants, and the course instructor.
 
 \vspace*{-.05in}
 \begin{itemize}
@@ -137,9 +137,9 @@ assistants, and the instructor.
 
 \item {\bf Help One Another!} If your neighbor is struggling and you know what to do, offer your help. Don't ``do the
   work'' for them, but advise them on what to type or how to handle things. If you are stuck on a part of this practical
-  session and you could not find any insights in either your textbook or online sources, formulate an intelligent
-  question to ask your neighbor, a teaching assistant, or a course instructor. Try to strike the right balance between
-  asking for help when you cannot solve a problem and working independently to find a solution.
+  assignment and you could not find any insights in either your textbook or online sources, formulate a question to ask
+  your neighbor, a teaching assistant, or a course instructor. Try to strike the right balance between asking for help
+  when you cannot solve a problem and working independently to find a solution.
 
 \item {\bf Review the Honor Code Policy on the Syllabus.} Remember that while you may discuss programs with other
   students in the course, programs that are nearly identical to, or merely variations on, the work of others will be
