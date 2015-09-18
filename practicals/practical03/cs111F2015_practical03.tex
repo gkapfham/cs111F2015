@@ -67,7 +67,16 @@ some small additions to this program so that it fulfills its intended purpose. T
 that you must do is add a call to {\tt page.fillRect} method so that it paints a rectangle of the color requested by the
 user. Next, you should store in the variable called {\tt userComplementaryColor} a color that is the complement of the
 one requested by the user. This means that you will have to write in the form of a Java expression the simple equations
-that were intuitively explained in the previous paragraph.
+that were intuitively explained in the previous paragraph. Now, the source code line {\tt
+page.setColor(userComplementaryColor);} will cause the next shape to be filled with the complement of the color chosen
+by the user. Finally, you will need to again call the {\tt page.fillRect} method with the parameters that will yield a
+rectangle correctly drawn in the second half of the image. Please see the instructor or a teaching assistant if you have
+questions about these steps.
+
+\vspace*{-.1in}
+\subsection*{Testing Your Finished Program}
+
+
 
 \subsection*{Using Version Control Correctly}
 
@@ -80,13 +89,14 @@ upload your Java program and an output produced by your program to Bitbucket usi
 Please review your ``Git Cheatsheet'' and talk with a member of the class, the course instructor, or a teaching
 assistant if you do not understand how to correctly use the Git version control system.
 
-
-
-
-
+As in the past practical assignments, you should submit the final versions of your Java code and your output by midnight
+on the day of your practical. For this assignment in particular, you must turn in the completed versions of the {\tt
+DisplayDrawingCanvas.java} and {\tt PaintDrawingCanvas.java} files along with screenshots and terminal outputs
+associated with running the program three times. Please pick RGB values for input to the {\tt DisplayDrawingCanvas}
+program that reveal that your calculation of the complementary color is working as well as is possible.
 
 \vspace*{-.2in}
-\subsection*{General Guidelines for Practical Sessions}
+\subsection*{Reminder About the General Guidelines for Practical Sessions}
 
 Since this is one of our first practical assignments and you are still learning how to use the Java programming
 language, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
