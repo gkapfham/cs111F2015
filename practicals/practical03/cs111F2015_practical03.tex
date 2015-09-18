@@ -46,7 +46,7 @@ source code work? Next, find the line of code that creates the {\tt JFrame} and 
 and the date. This is the only change that you need to make to this file! Please see the instructor if you do not
 understand the code in this file.
 
-\vspace*{-.1in}
+\vspace*{-.2in}
 \subsection*{Painting with Complementary Colors}
 
 In this phase of the assignment, you will need to load the file {\tt PaintDrawingCanvas.java} file into {\tt gvim} so
@@ -57,18 +57,18 @@ to note that this code refers to a variable declared in the {\tt DisplayDrawingC
 The purpose of this program is to create a canvas that contains two colors in it. The first colored rectangle---which
 should take up exactly half of the page---should display the color that was requested by the user. For instance, if the
 user inputs the RGB value of $(255,0,0)$, then this region of the graphic should be filled with the color red. The
-second half of the image should be filled with the complement of the color requested by the user. For example, the
+second half of the image should be filled with the ``complement'' of the color requested by the user. For example, the
 complement of the red value of $255$ is the value $255-255=0$ and the complement of the green value of $0$ is
-$255-0=255$. Intuitively, taking the complement of an RGB should give you the color that is on the opposite side of the
-color wheel that you can view in the {\tt gimp} program. So, what is the RGB value of the color red? Does this color
+$255-0=255$. Intuitively, taking the complement of an RGB should give you the color that is on the ``opposite'' side of
+the color wheel that you can view in the {\tt gimp} program. So, what is the RGB value of the color red? Does this color
 appear on the opposite side of the color wheel in {\tt gimp}?
 
 As a means of practicing the use of variables and expressions, and the creation of graphics in Java, you should make
 some small additions to this program so that it fulfills its intended purpose. To accomplish this task, the first thing
-that you must do is add a call to {\tt page.fillRect} method so that it paints a rectangle of the color requested by the
-user. Next, you should store in the variable called {\tt userComplementaryColor} a color that is the complement of the
-one requested by the user. This means that you will have to write in the form of a Java expression the simple equations
-that were intuitively explained in the previous paragraph. Now, the source code line {\tt
+that you must do is add a call to the {\tt page.fillRect} method so that it paints a rectangle of the color requested by
+the user. Next, you should store in the variable called {\tt userComplementaryColor} a color that is the complement of
+the one requested by the user. This means that you will have to write in the form of a Java expression the simple
+equations that were intuitively explained in the previous paragraph. Now, the source code line {\tt
 page.setColor(userComplementaryColor);} will cause the next shape to be filled with the complement of the color chosen
 by the user. Finally, you will need to again call the {\tt page.fillRect} method with the parameters that will yield a
 rectangle correctly drawn in the second half of the image. Please see the instructor or a teaching assistant if you have
@@ -84,6 +84,11 @@ may want to try several different RGB values that are listed in Figure 2.10 of y
 your program is possible by picking an RGB value from one side of the color wheel in {\tt gimp} and then checking that
 your program correctly displays its complement (the one ``across'' the color wheel) in the graphic. Does your testing
 reveal any limitations to our approach to calculating the complementary color?
+
+Students who are interested in an additional challenge can investigate other ways to calculate complementary colors.
+Another option for enterprising students is to further investigate the theory of color and actually implement ways to
+display other types of colors derived from the one input by the user. For instance, you might try to display a color
+that is ``analogous'' to the user's.
 
 \vspace*{-.1in}
 \subsection*{Using Version Control Correctly}
@@ -124,14 +129,11 @@ assistants, and the instructor.
   add}'', ``{\tt git commit}'', and ``{\tt git push}'' commands.
 
 \item {\bf Practice Key Laboratory Skills.} As you are completing this assignment, practice using the {\tt gvim} text
-  editor and the Ubuntu terminal until you can easily use their most important features.  Additionally, ask
-  a teaching assistant or the course instructor to teach you some of the advanced features of {\tt gvim} and the
-  terminal, thereby helping you to work more effectively.
+  editor and the terminal until you can easily use their most important features.
 
 \item {\bf Try to Finish During the Class Session.} Practical exercises are not intended to be the equal of the
-  laboratory assignments. If you are simply a slow typist, I've given you until the end of the day, but ideally you
-  should upload a file, even a partially working one, by the end of the class period. So, make sure that you correctly
-  upload your file to your Git repository!
+  laboratory assignments. Even if you are simply a slow typist, you should still ideally upload a file, even a partially
+  working one, by the end of the class period.
 
 \item {\bf Help One Another!} If your neighbor is struggling and you know what to do, offer your help. Don't ``do the
   work'' for them, but advise them on what to type or how to handle things. If you are stuck on a part of this practical
