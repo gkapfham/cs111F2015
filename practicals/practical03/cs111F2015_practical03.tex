@@ -23,97 +23,19 @@ these topics.
 \vspace*{-.1in}
 \subsection*{Preparing for the Programming Task}
 
-
-
-
-
-Before you start creating the Java program required by this assignment, you should separately type the commands ``{\tt cd
+Before you start enhancing the Java classes required by this assignment, you should separately type the commands ``{\tt cd
   cs111F2015}'', ``{\tt cd cs111F2015-<your user name>}'', and ``{\tt cd practicals}'' in your terminal window. Once you
-are in the {\tt practicals/} directory of your Git repository, you can type the command ``{\tt mkdir practical02}'' to
+are in the {\tt practicals/} directory of your Git repository, you can type the command ``{\tt mkdir practical03}'' to
 create a new directory for this assignment. You can run the {\tt gvim} command from this directory when you are ready to
 begin to implement the required Java program. Please see the instructor if you have problems with these preparatory steps.
 
-% \newpage
 
-\subsection*{Example 1: File ``{\tt PrintName.java}''}
-\begin{verbatim}
-     //**********************************
-     // Bob Roos
-     // Practical 2, 11-12 September 2015
-     //
-     // Prints a name `Bob'
-     //**********************************
-     import java.util.Date;
-     public class PrintName
-     {
-       public static void main(String[] args)
-       {
-          System.out.println("Bob Roos, CMPSC 111\n" + new Date() + "\n");
-          System.out.println(" ____        __");
-          System.out.println("  |  \\        |");
-          System.out.println("  |__/   __   |__");
-          System.out.println("  |  \\  /  \\  |  \\");
-          System.out.println(" _|__/  \\__/ _|__/");
-       }
-     }
-\end{verbatim}
 
-\noindent{\bf OUTPUT:}
-\begin{verbatim}
-     javac PrintName.java
-     java PrintName
-     Bob Roos, CMPSC 111
-     Wed Sep 10 21:04:41 EST 2015
 
-      ____        __
-       |  \        |
-       |__/   __   |__
-       |  \  /  \  |  \
-      _|__/  \__/ _|__/
-\end{verbatim}
 
-\newpage
 
-\subsection*{Example 2: File ``{\tt PrintFace.java}''}
-\begin{verbatim}
-     //**********************************
-     // Janyl Jumadinova
-     // Practical 2, 11-12 September 2015
-     // Prints a face
-     //**********************************
-     import java.util.Date;
-     public class PrintFace
-     {
-       public static void main(String[] args)
-       {
-          System.out.println("Janyl Jumadinova, CMPSC 111\n" + new Date() + "\n");
-          System.out.println("   \\\\\\|||///");
-          System.out.println("   /       \\");
-          System.out.println("   | -- -- |");
-          System.out.println("  @|  O O  |@");
-          System.out.println("   |   V   |");
-          System.out.println("    \\ \\_/ /");
-          System.out.println("     \\___/");
-       }
-     }
-\end{verbatim}
-\noindent{\bf OUTPUT:}
-\begin{verbatim}
-     javac PrintFace.java
-     java PrintFace
-     Janyl Jumadinova, CMPSC 111
-     Wed Sep 10 21:11:55 EST 2015
 
-        \\\|||///
-        /       \
-        | -- -- |
-       @|  O O  |@
-        |   V   |
-         \ \_/ /
-          \___/
-\end{verbatim}
 
-% \newpage
 \subsection*{Using Version Control Correctly}
 
 As you are typing your program in the {\tt gvim} text editor, you should regularly save your files.  Once you have
@@ -125,34 +47,18 @@ upload your Java program and an output produced by your program to Bitbucket usi
 Please review your ``Git Cheatsheet'' and talk with a member of the class, the course instructor, or a teaching
 assistant if you do not understand how to use the Git version control system.
 
-\vspace*{-.1in}
-\subsection*{Hints About Java Programming and Escaped Characters}
-\vspace*{-.05in}
 
-The name of your program file (for instance, ``{\tt PrintFace.java}'') must be the same as the name in the ``{\tt public
-  class ...}'' statement---see earlier examples where you practiced this skill.
 
-The characters ``\verb$\$'' (backslash) and ``\verb$"$'' (double-quote)
-require special handling. To print them out, you need to put an extra
-``\verb$\$'' in front of them. For instance,
 
-\vspace*{-.1in}
-\begin{quote}
-The statement:\ \ \ \ \ \ \ \verb$System.out.println("backslash: \\, quote: \"");$\\
-prints:\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \
-\verb$backslash: \, quote: "$
-\end{quote}
-\vspace*{-.1in}
+
+
+\vspace*{-.2in}
+\subsection*{General Guidelines for Practical Sessions}
 
 Since this is one of our first practical assignments and you are still learning how to use the Java programming
 language, don't become frustrated if you make a mistake. Instead, use your mistakes as an opportunity for learning both
 about the necessary technology and the background and expertise of the other students in the class, the teaching
 assistants, and the instructor.
-
-\vspace*{-.2in}
-\subsection*{General Guidelines for Practical Sessions}
-
-% Please follow these general guidelines as you complete this practical assignment:
 
 \vspace*{-.05in}
 \begin{itemize}
