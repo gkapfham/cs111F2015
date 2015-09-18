@@ -36,6 +36,38 @@ repository to your own {\tt cs111F2015-<your user name>} repository inside the {
 move on to the next steps, make sure that your repository is clearly organized with separate directories for labs and
 practicals and \mbox{each assignment}.
 
+\vspace*{-.1in}
+\subsection*{Reading Input from the User}
+
+Please use the {\tt gvim} text editor to carefully study the code in the {\tt DisplayDrawingCanvas.java} file. What are
+the lines in this program that read input from the user and store the input values in variables? How do these lines of
+source code work? Next, find the line of code that creates {\tt JFrame} and modify it so that it correctly prints your
+name and the date. This is the only change that you need to make to this file! Please see the instructor if you do not
+understand the code in this file.
+
+\vspace*{-.1in}
+\subsection*{Painting with Complementary Colors}
+
+In this phase of the assignment, you will need to load the file {\tt PaintDrawingCanvas.java} file into {\tt gvim} so
+that you can understand the existing code in this file and then add your own enhancements to this class. It is important
+to note that this code refers to a variable declared in the {\tt DisplayDrawingCanvas} class through notation such as
+{\tt DisplayDrawingCanvas.redValue}.
+
+The purpose of this program is to create a canvas that contains two colors in it. The first colored rectangle---which
+should take up exactly half of the page---should display the color that was requested by the user. For instance, if the
+user inputs the RGB value of $(255,0,0)$, then this region of the graphic should be filled with the color red. The
+second half of the image should be filled with the complement of the color requested by the user. For example, the
+complement of the red value of $255$ is the value $255-255=0$ and the complement of the green value of $0$ is
+$255-0=255$. Intuitively, taking the complement of an RGB should give you the color that is on the opposite side of the
+color wheel that you can view in the {\tt gimp} program. So, what is the RGB value of the color red? Does this color
+appear on the opposite side of the color wheel in {\tt gimp}?
+
+As a means of practicing the use of variables and expressions, and the creation of graphics in Java, you should make
+some small additions to this program so that it fulfills its intended purpose. To accomplish this task, the first thing
+that you must do is add a call to {\tt page.fillRect} method so that it paints a rectangle of the color requested by the
+user. Next, you should store in the variable called {\tt userComplementaryColor} a color that is the complement of the
+one requested by the user. This means that you will have to write in the form of a Java expression the simple equations
+that were intuitively explained in the previous paragraph.
 
 \subsection*{Using Version Control Correctly}
 
