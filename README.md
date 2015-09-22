@@ -1,4 +1,4 @@
-# Computer Science 111, Fall 2015
+# Computer Science 111 Fall 2015
 
 This repository contains the LaTeX and HTML source code for the laboratory and practical assignments, course review
 slides, study guides, and the syllabus for Computer Science 111, Fall 2015.  Taught by [Gregory M.
@@ -18,7 +18,7 @@ The source code of the LaTeX documents uses a custom LaTeX style file and severa
 standard with a modern LaTeX distribution such a TeXLive 2015. All of the slides are programmed with the
 [reveal.js](https://github.com/hakimel/reveal.js/) framework. The background images in the slides were all collected
 from the [Flickr Creative Commons](https://www.flickr.com/creativecommons/) through the use of the
-[cogdog/flickr-cc-helper](https://github.com/cogdog/flickr-cc-helper).
+[cogdog/flickr-cc-helper](https://github.com/cogdog/flickr-cc-helper) tool.
 
 You are invited to use this repository as a means for learning more about instruction in an introductory computer
 science course. If you find this repository useful, could I trouble you to star it and then acknowledge it in your own
@@ -54,6 +54,6 @@ documents using other LaTeX development tools, such as `latexmk`. If you are una
 with your development tools and your execution environment, then please open a new issue and I will attempt to resolve
 your concerns.
 
-Additionally, the HTML slides are displayed on modern Web browsers that run on the Ubuntu and Android operating systems.
-If the HTML slides do not correctly display on your Web browser, then I also encourage you to open an issue that I will
-attempt to handle.
+Additionally, the HTML slides have been tested on modern Web browsers (e.g., Chrome and Firefox) that run on the Ubuntu
+and Android operating systems.  If the HTML slides do not correctly display on your Web browser, then I also encourage
+you to open an issue so that I can handle the problem that you have found.
