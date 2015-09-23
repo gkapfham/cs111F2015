@@ -72,6 +72,44 @@ storing secret messages.  Involving the hiding of a secret ``in plain sight'', s
 create and send a secret message. For this assignment, you and your partner will implement a program called {\tt
 WordHide.java} that will perform these operations:
 
+\begin{enumerate}
+
+  \item Prompt the user for word that is exactly ten characters long. For now, {\tt WordHide} should allow the user to
+    enter any type of ``padding character'' before or after a word that is less than ten characters. If the word is
+    longer than ten characters, then your program should simply discard all of the characters after the tenth one.
+
+  \item Since the {\tt WordHide} program will output all of its character in a capitalized form, you should transform the
+    word provided by the user so that it only contains upper-case letters.
+
+  \item Finally, {\tt WordHide} should output a $20 \times 20$ ``grid'' of letters that contain the user's word
+    ``hidden'' inside of it.
+
+\end{enumerate}
+
+\vspace*{-.11in}
+\subsubsection*{Carefully Review the Honor Code}
+
+The Academic Honor Program that governs the entire academic program at Allegheny College is described in the Allegheny
+Academic Bulletin.  The Honor Program applies to all work that is submitted for academic credit or to meet non-credit
+requirements for graduation at Allegheny College.  This includes all work assigned for this class (e.g., examinations,
+  laboratory assignments, and the final project).  All students who have enrolled in the College will work under the Honor
+Program.  Each student who has matriculated at the College has acknowledged the following pledge:
+
+\vspace*{-.05in}
+\begin{quote}
+  I hereby recognize and pledge to fulfill my responsibilities, as defined in the Honor Code, and to maintain the
+  integrity of both myself and the College community as a whole.
+\end{quote}
+\vspace*{-.05in}
+
+\noindent It is understood that an important part of the learning process in any course, and particularly one in
+computer science, derives from thoughtful discussions with teachers and fellow students.  Such dialogue is encouraged.
+However, it is necessary to distinguish carefully between the student who discusses the principles underlying a problem
+with others and the student who produces assignments that are identical to, or merely variations on, someone else's
+work.  While it is acceptable for students in this class to discuss their programs, data sets, and reports with their
+classmates, deliverables that are nearly identical to the work of others will be taken as evidence of violating the
+\mbox{Honor Code}. For this assignment, it is crucial that you only share source code segments with your chosen partner.
+
 \vspace*{-.1in}
 \subsection*{Required Deliverables}
 
@@ -88,7 +126,7 @@ Slack channel that you can use to support all of your communication for this ass
 
         \item A completed, properly commented and formatted {\tt WordHide.java} program. Please make sure that your Java
           programs include the comment header file with the Honor Code, your name, date, and the description of the
-          program.
+          program, in addition to displaying the lab number and the date on which the program was run.
 
         \item Three outputs from running {\tt WordHide} in the terminal window three times with three different user
           inputs from the user. Your output should clearly demonstrate how your program hides the user's input somewhere
