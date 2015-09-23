@@ -74,20 +74,28 @@ WordHide.java} that will perform these operations:
 
 \begin{enumerate}
 
-  \item Prompt the user for word that is exactly ten characters long. For now, {\tt WordHide} should allow the user to
-    enter any type of ``padding character'' before or after a word that is less than ten characters. If the word is
-    longer than ten characters, then your program should simply discard all of the characters after the tenth one.
+  \item Prompt the user for a word that is exactly ten characters in length. For now, {\tt WordHide} should allow the
+    user to enter any type of ``padding character'' before or after a word that is less than ten characters. If the word
+    is longer than ten characters, then your program should simply discard all of the characters after the tenth one
+    (you may also implement better strategies).
 
   \item Since the {\tt WordHide} program will output all of its character in a capitalized form, you should transform the
     word provided by the user so that it only contains upper-case letters.
 
   \item Finally, {\tt WordHide} should output a $20 \times 20$ ``grid'' of letters that contain the user's word
-    ``hidden'' inside of it.
+    ``hidden'' inside of it. All of the letters in this grid should be capitalized. You and your partner should
+    brainstorm and prototype different techniques for effectively hiding the user's word in the grid of letters. As you
+    implement your program, you must make decisions about the following matters: (i) what letters will you add to the
+    grid to best hide the user's word? (ii) where will you place the user's word in the grid? (iii) what features of the
+    Java programming language will you use to ensure the grid is formatted properly in the terminal? As you answer these
+    questions and finish implementing {\tt WordHide.java}, it may help to consider the fact that the user's word may be
+    better hidden if the grid contains letters found in the input.
 
 \end{enumerate}
 
-\vspace*{-.11in}
+\vspace*{-.15in}
 \subsubsection*{Carefully Review the Honor Code}
+\vspace*{-.05in}
 
 The Academic Honor Program that governs the entire academic program at Allegheny College is described in the Allegheny
 Academic Bulletin.  The Honor Program applies to all work that is submitted for academic credit or to meet non-credit
