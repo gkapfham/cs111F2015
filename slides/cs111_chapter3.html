@@ -1,132 +1,141 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-        <title>Computer Science 111: Introduction to Computer Science 111</title>
+    <title>Computer Science 111: Introduction to Computer Science 111</title>
 
-        <meta name="description" content="Teaching Slides for Computer Science 111">
-        <meta name="author" content="Gregory M. Kapfhammer">
+    <meta name="description" content="Teaching Slides for Computer Science 111">
+    <meta name="author" content="Gregory M. Kapfhammer">
 
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-        <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/night-gkapfham.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night-gkapfham.css" id="theme">
 
-        <!-- For syntax highlighting -->
-        <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow&#45;night&#45;bright.css">         -->
-        <!-- <link rel="stylesheet" href="lib/css/tomorrow&#45;night&#45;bright.css"> -->
-        <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow&#45;night&#45;bright.css">         -->
+    <!-- <link rel="stylesheet" href="lib/css/tomorrow&#45;night&#45;bright.css"> -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-        <!-- Install Font Awesome and the Google Web fonts -->
-        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans' rel='stylesheet' type='text/css'>
+    <!-- Install Font Awesome and the Google Web fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans' rel='stylesheet' type='text/css'>
 
-        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
-        <script>
-            if( window.location.search.match( /print-pdf/gi ) ) {
-                var link = document.createElement( 'link' );
-                link.rel = 'stylesheet';
-                link.type = 'text/css';
-                link.href = 'css/print/pdf.css';
-                document.getElementsByTagName( 'head' )[0].appendChild( link );
-            }
-        </script>
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
 
-        <!--[if lt IE 9]>
-        <script src="lib/js/html5shiv.js"></script>
-        <![endif]-->
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+      <![endif]-->
 
-    </head>
+  </head>
 
-    <body>
+  <body>
 
-        <div class="reveal">
+    <div class="reveal">
 
-            <div class="slides">
+      <div class="slides">
 
-                <section data-background-transition="none" data-background="http://farm4.static.flickr.com/3161/2681686220_1f39f404f4_z.jpg" style="background: rgba(29,31,33,0.9)">
-                    <h1>Computer Science 111:</h1>
-                    <h3>Introduction to Computer Science I</h3>
-                    <h3>Chapter Three</h3>
-                    <p>Gregory M. Kapfhammer</p>
-                    <br /><small><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creative commons licensed ( BY-NC-SA )</a> <a title="Thinkin' about the code" href="http://flickr.com/photos/yourdon/2681686220">flickr photo</a> shared by <a href="http://flickr.com/people/yourdon">Ed Yourdon</a></small>
-                </section>
+        <section data-background-transition="none" data-background="http://farm4.static.flickr.com/3161/2681686220_1f39f404f4_z.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1>Computer Science 111:</h1>
+          <h3>Introduction to Computer Science I</h3>
+          <h3>Chapter Three</h3>
+          <p>Gregory M. Kapfhammer</p>
+          <br /><small><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creative commons licensed ( BY-NC-SA )</a> <a title="Thinkin' about the code" href="http://flickr.com/photos/yourdon/2681686220">flickr photo</a> shared by <a href="http://flickr.com/people/yourdon">Ed Yourdon</a></small>
+        </section>
 
-                <section>
-                    <h1>Objects and Primitives</h1>
-                    <p class="fragment">Similarities and differences?</p>
-                    <p class="fragment">Can you create a list for both of these?</p>
-                    <p class="fragment">What does this look like in memory?</p>
-                    <p class="fragment">Aliases for reference variables</p>
-                </section>
+        <section>
+          <h1>Color Scheme</h1>
+          <p class="fragment"><b class="orange">Key Concept</b></p>
+          <p class="fragment"><b class="purple">Corresponding Diagram</b></p>
+          <p class="fragment"><b class="green">In-Class Discussion</b></p>
+          <p class="fragment"><b class="red">In-Class Activity</b></p>
+          <p class="fragment"><b class="blue">Details in the Textbook</b></p>
+        </section>
 
-                <section>
-                    <h1 id="string_manipulation">String Manipulation</h1>
-                    <p class="fragment">How do we index a String?</p>
-                    <p class="fragment">What are the methods provided by String?</p>
-                    <p class="fragment">Let's try it! We can write a Java program.</p>
-                    <p class="fragment">Input the program in Listing 3.1 on page 120</p>
-                    <p class="fragment">Can you explain the output of this program?</p>
-                    <p class="fragment">Now, change the replacement and the substring!</p>
-                </section>
+        <section>
+          <h1>Objects and Primitives</h1>
+          <p class="fragment">Similarities and differences?</p>
+          <p class="fragment">Can you create a list for both of these?</p>
+          <p class="fragment">What does this look like in memory?</p>
+          <p class="fragment">Aliases for reference variables</p>
+        </section>
 
-                <section>
-                    <h1 id="packages">Packages</h1>
-                    <p class="fragment">What is a class library?</p>
-                    <p class="fragment">Application programming interface</p>
-                    <p class="fragment">What are some examples of packages?</p>
-                    <p class="fragment">Check the online documentation!</p>
-                    <p class="fragment">Make sure to use an <code>import</code>!</p>
-                    <p class="fragment">Let's explore a new package!</p>
-                </section>
+        <section>
+          <h1 id="string_manipulation">String Manipulation</h1>
+          <p class="fragment">How do we index a String?</p>
+          <p class="fragment">What are the methods provided by String?</p>
+          <p class="fragment">Let's try it! We can write a Java program.</p>
+          <p class="fragment">Input the program in Listing 3.1 on page 120</p>
+          <p class="fragment">Can you explain the output of this program?</p>
+          <p class="fragment">Now, change the replacement and the substring!</p>
+        </section>
 
-                <section>
-                    <h1 id="random_numbers">Random Numbers</h1>
-                    <p class="fragment">Provided by <code>java.util.Random</code></p>
-                    <p class="fragment">Calculations based on a seed value</p>
-                    <p class="fragment">Please input the program in Listing 3.2</p>
-                    <p class="fragment">To simplify: Just one of the <code>nextInt</code> and <code>nextFloat</code> calls</p>
-                </section>
+        <section>
+          <h1 id="packages">Packages</h1>
+          <p class="fragment">What is a class library?</p>
+          <p class="fragment">Application programming interface</p>
+          <p class="fragment">What are some examples of packages?</p>
+          <p class="fragment">Check the online documentation!</p>
+          <p class="fragment">Make sure to use an <code>import</code>!</p>
+          <p class="fragment">Let's explore a new package!</p>
+        </section>
 
-            </div>
+        <section>
+          <h1 id="random_numbers">Random Numbers</h1>
+          <p class="fragment">Provided by <code>java.util.Random</code></p>
+          <p class="fragment">Calculations based on a seed value</p>
+          <p class="fragment">Please input the program in Listing 3.2</p>
+          <p class="fragment">To simplify: Just one of the <code>nextInt</code> and <code>nextFloat</code> calls</p>
+        </section>
 
-            <script src="lib/js/head.min.js"></script>
-            <script src="js/reveal.min.js"></script>
+      </div>
 
-            <script>
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.min.js"></script>
 
-                // Full list of configuration options available here:
-                // https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-controls: true,
-progress: true,
-history: true,
-center: true,
+      <script>
 
-theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none/none
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          center: true,
 
-// Parallax scrolling
-// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-// parallaxBackgroundSize: '2100px 900px',
+          theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+          transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none/none
 
-// Optional libraries used to extend on reveal.js
-dependencies: [
-{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-            ]
-            });
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
 
-            </script>
+            // Optional libraries used to extend on reveal.js
+          dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+              { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          ]
+        });
 
-        </body>
-    </html>
+      </script>
+
+  </body>
+</html>
