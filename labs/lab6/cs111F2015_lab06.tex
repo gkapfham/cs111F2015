@@ -1,17 +1,18 @@
 \input{111pre}
 \begin{document}
-\MYTITLE{Lab 5 for Sections 03 and 04 \\ 2 October 2014 \\ Due Thursday, 9 October by 2:30pm }
+\MYTITLE{Lab 6 \\ 30 September 2015 \\ Due Wednesday, 7 October by 2:30pm }
 
 \subsection*{Objectives}
 \vspace{-0.05in}
-To write a Java program that manipulates strings of DNA by appropriately using methods from the {\tt String} and {\tt Random} classes. 
+To write a Java program that manipulates strings of DNA by appropriately using methods from the {\tt String} and {\tt Random} classes.
 
 \vspace{-0.05in}
 \subsection*{Special Notes}
 \vspace{-0.05in}
-This is your first team-based assignment. You have to work in groups of two for this assignment. You may select your own partner. 
 
-\noindent This is a longer laboratory assignment than your previous assignments. Please plan your time this week accordingly and work on it incrementally. Remember, divide and conquer! 
+This is your first team-based assignment. You have to work in groups of two for this assignment. You may select your own partner.
+
+\noindent This is a longer laboratory assignment than your previous assignments. Please plan your time this week accordingly and work on it incrementally. Remember, divide and conquer!
 
 \vspace{-0.05in}
 \subsection*{General Guidelines for Labs}
@@ -22,8 +23,8 @@ This is your first team-based assignment. You have to work in groups of two for 
 machine, be sure to transfer your programs to the Alden
 machines and re-run them before submitting.
 \item
-{\bf Update your repository often!} You should add, commit, 
-and push your updated files each time you work on them.  I will not grade 
+{\bf Update your repository often!} You should add, commit,
+and push your updated files each time you work on them.  I will not grade
 your programs until the due date has passed.
 \item
 {\bf Review the Honor Code policy.} You
@@ -34,7 +35,7 @@ to others will be taken as evidence of violating the Honor Code.
 \vspace{-0.05in}
 \subsection*{Reading Assignment}
 \vspace{-0.05in}
-To learn more about Java strings and random numbers, review Sections 3.1--3.5 in your textbook. Also carefully study the sample program 
+To learn more about Java strings and random numbers, review Sections 3.1--3.5 in your textbook. Also carefully study the sample program
 described in the section called {\tt A Sample Program} in this lab assignment document.
 
 \vspace{-0.05in}
@@ -45,12 +46,12 @@ In your own {\tt cs111F2014-<your user name>} repository inside {\tt labs} direc
 \vspace{-0.05in}
 \subsection*{Study a Sample Program}
 \vspace{-0.05in}
-Go to the shared course repository and pull {\tt StringDemo.java}. Copy this program into {\tt lab5} directory 
-inside your own {\tt cs111F2014-<your user name>} repository. 
+Go to the shared course repository and pull {\tt StringDemo.java}. Copy this program into {\tt lab5} directory
+inside your own {\tt cs111F2014-<your user name>} repository.
 Open this program and examine it to see what it does. Then
 run it a few times with different input strings.\\
 
-\noindent{\bf Questions to Discuss with Your Group Member} 
+\noindent{\bf Questions to Discuss with Your Group Member}
 (not to be handed in):
 \begin{itemize}
 \item Where is the random number generator {\em declared}?
@@ -70,7 +71,7 @@ is changed to:
 \end{center}
 Will the program still correctly display the upper-case version of {\tt s1}?
 \item
-Do the statements {\tt s1.toUpperCase();} and {\tt s1.toLowerCase();} 
+Do the statements {\tt s1.toUpperCase();} and {\tt s1.toLowerCase();}
 change the contents of {\tt s1}? (See previous question!)
 \item
 Suppose the user types {\tt abcde} when asked to enter a string.
@@ -92,8 +93,8 @@ List all the values that could be returned by ``{\tt r.nextInt(5)}''.
 Answer the question in the comment next to the statement ``\verb$location = r.nextInt(len+1);$''.
 \end{itemize}
 \item
-On paper, write down the string {\tt ABCDEFG}, with position numbers 
-between the letters. 
+On paper, write down the string {\tt ABCDEFG}, with position numbers
+between the letters.
 \begin{itemize}
 \item
 Underline the portion corresponding to the
@@ -134,7 +135,7 @@ Explain, in English words, what the following statement does:
 \end{itemize}
 Don't continue with the assignment until you understand the answers to all the
 questions above! {\em Please} feel free to discuss these with your
-classmates, teaching assistants and your instructor! 
+classmates, teaching assistants and your instructor!
 
 \vspace{-0.05in}
 \subsection*{DNA Manipulation Program}
@@ -144,12 +145,12 @@ Essentially, a DNA string is a string consisting of only the letters {\tt A}, {\
 various genetic traits such as hair color, eye color, and many others.
 
 Each DNA string has a {\em complement} formed by replacing each code letter by its
-complementary code. {\tt A} and {\tt T} are complements; so are {\tt G} and 
+complementary code. {\tt A} and {\tt T} are complements; so are {\tt G} and
 {\tt C}. Thus, the complement to the string ``{\tt CAATGTCAC}'' is
 ``{\tt GTTACAGTG}''.
 DNA sometimes undergoes a {\em mutation}. There are three types of mutation:
 insertion of a new letter somewhere in the string; removal of a letter from the
-string; and replacement of one letter by another. The table below shows the examples of the replacement of letters and the complement of the given sequence. 
+string; and replacement of one letter by another. The table below shows the examples of the replacement of letters and the complement of the given sequence.
 
 \begin{center}
 
@@ -162,7 +163,7 @@ $S$      & $\mathtt{ACGTGCCTCTTGGTAC}$ \\
 A $\to$ T &  $\mathtt{TCGTGCCTCTTGGTTC}$ \\
 T $\to$ A &  $\mathtt{TCGAGCCACAAGGATC}$ \\
 C $\to$ G &  $\mathtt{TGGAGGGAGAAGGATG}$ \\
-G $\to$ C &  $\mathtt{TGCACGGAGAACCATG}$ \\ 
+G $\to$ C &  $\mathtt{TGCACGGAGAACCATG}$ \\
 \hline
 $S_{complementary}$ &  $\mathtt{TGCACGGAGAACCATG}$ \\
 \hline
@@ -176,7 +177,7 @@ are not cumulative.
 \item
 Ask the user to type in a string of DNA, declare a variable and save the DNA string that the user inputs into a variable called ``{\tt dnaString}''.
 \item
-Print the complement of {\tt dnaString}, appropriately labeled. 
+Print the complement of {\tt dnaString}, appropriately labeled.
 (HINT: use several applications of the String class's ``{\tt replace}'' method. For example, if I want to replace all characters `A' with characters `T' in the String variable {\tt dnaString}, then I will say {\tt dnaString.replace(`A',`T');}, but there's still a trick in this case of getting the complement!)
 
 Another HINT regarding the trick: As you make your substitutions to get your complementary string, remember that you are replacing, for example, \emph{A}'s to \emph{T}'s from the $S$ to make our complementary sequence ($S_{complementary}$). Do not simply perform such substitution directly because you will be unable to figure out which \emph{T}'s were original \emph{T}'s (and not the replaced ones) that you were supposed to change to \emph{A}'s. You can check your complementary sequence from the website  (using the \emph{Complement} option after you enter your sequence): \url{arep.med.harvard.edu/labgc/adnan/projects/Utilities/revcomp.html}.
@@ -189,14 +190,14 @@ extra letter into {\tt dnaString}; it
 must be one of the four allowed letters. Print this, appropriately labeled
 and identifying the position of the insertion and the letter inserted.
 \item
-Perform a random mutation consisting of removing a letter from a 
+Perform a random mutation consisting of removing a letter from a
 randomly-chosen position in {\tt dnaString}; print this, appropriately labeled
 and identifying the position of the insertion and the letter removed.
 \item
 Perform a random mutation consisting of altering a single letter from a
 randomly-chosen position in {\tt dnaString}; it must be changed to a
 randomly-chosen letter from the set of allowed letters. Print it, appropriately
-labeled 
+labeled
 and identifying the position of the replacement, the new letter, and the
 letter it replaces.
 \end{enumerate}
@@ -209,14 +210,14 @@ changes are random, but the structure of the output will be the same:
      Janyl Jumadinova
      Lab 5
      Thu Oct 2 12:51:58 EDT 2014
-     
+
      Enter a string containing only C, G, T, and A: actg
      Complement of ACTG is TGAC
      Inserting T at position 0 gives TACTG
      Deleting from position 1 gives ATG
      Changing position 2 gives ACGG
 \end{verbatim}
-\begin{verbatim}     
+\begin{verbatim}
      aldenv5:lab5 jjumadinova$ java Lab5
      Janyl Jumadinova
      Lab 5
@@ -229,7 +230,7 @@ changes are random, but the structure of the output will be the same:
      Changing position 0 gives ACTG
 \end{verbatim}
 
-In the second example, nothing was changed in the last line---the program 
+In the second example, nothing was changed in the last line---the program
 randomly replace the letter ``{\tt A}'' with the letter ``{\tt A}'' !
 This behavior is ok.
 
@@ -237,9 +238,9 @@ This behavior is ok.
 \subsection*{Additional Program Requirements}
 \vspace{-0.05in}
 \begin{itemize}
-\item Make sure your program prints the names of all team members, the lab number, and the date as the first few output lines. 
-\item Make sure your program contains the comment header with the honor pledge, the names of all team members, lab number, date, and the purpose of the program. 
-\item Make sure you document your program properly, by using comments throughout your program whenever appropriate. 
+\item Make sure your program prints the names of all team members, the lab number, and the date as the first few output lines.
+\item Make sure your program contains the comment header with the honor pledge, the names of all team members, lab number, date, and the purpose of the program.
+\item Make sure you document your program properly, by using comments throughout your program whenever appropriate.
 \item Make sure your output
 is neat (no missing spaces, etc.) and that your program is neat (indenting, etc.).
 \end{itemize}
@@ -250,24 +251,24 @@ is neat (no missing spaces, etc.) and that your program is neat (indenting, etc.
 In addition to turning in printed and signed versions, for this assignment you are invited to submit electronic versions of the following deliverables through the Bitbucket repository. As you complete this step, you should make sure that you
 created a {\tt lab5/} directory within the Git repository.  Then, you can save all of the required deliverables in the
 {\tt lab5/} directory---please see the course instructor or a teaching assistant if you are not able to create your
-directory properly. 
+directory properly.
 
 \begin{enumerate}
 	\item A completed, properly commented and formatted {\tt Lab5.java} program.
 
-        \item An output document containing at least \textbf{three different} outputs obtained after running {\tt Lab5} in the terminal window at least three times. 
-        
+        \item An output document containing at least \textbf{three different} outputs obtained after running {\tt Lab5} in the terminal window at least three times.
+
         \item A document describing the strategy your team developed for completing this assignment and the work each team member has completed. While the {\tt Lab5} program and the output file have to be the same for both members of the same team, you may include any challenges you individually faced in this document.
 \end{enumerate}
 
 \vspace{-0.1in}
 Share your program, the output file and the document describing your team work with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt
 git commit}'', and ``{\tt git push}'' commands. When you are done, please ensure that the Bitbucket Web site has
-a {\tt lab5/} directory in your repository with the two files called {\tt Lab5.java}, {\tt output} and {\tt report}. You should see 
+a {\tt lab5/} directory in your repository with the two files called {\tt Lab5.java}, {\tt output} and {\tt report}. You should see
 the instructor if you have questions about assignment submission.
 
 \vspace{-0.05in}
-\subsection*{A Quick Tutorial on Random Number Generation} 
+\subsection*{A Quick Tutorial on Random Number Generation}
 \vspace{-0.05in}
 To generate random numbers, we need an object of the {\tt Random} class.
 You can name this variable anything you want---``{\tt rand}'' or ``{\tt
@@ -285,7 +286,7 @@ The three most useful methods in the {\tt Random} class are {\tt nextInt}, {\tt 
 generator (it can be called something else) and {\tt n} is a positive integer, {\tt rand.nextInt(n)}
 produces an {\tt int} in the range 0, \ldots, {\tt n}-1 and {\tt
 rand.nextDouble()} and {\tt rand.nextFloat()} produce a {\tt double} and a {\tt float} respectively in the range from 0 to 1 (not
-including 1). 
+including 1).
 
 By being clever, we can get different ranges---here are a few
 examples. In the Java code, assume {\tt i} is an {\tt int} variable,
@@ -311,6 +312,6 @@ You can also use random numbers to do other creative things, for example pick ou
 to pick out a random letter out of a first name, I can first create and initialize a variable {\tt{String professorName =
 "Janyl";}} Then I can generate a random number between $0$ and $4$ and save it into a variable of type {\tt int} as
 {\tt{ int randomNumber = rand.nextInt(5)}}. Finally, I  use {\tt{charAt}} method to select the character at a position
-created by the random number generator as {\tt{professorName.charAt(randomNumber)}}. 
+created by the random number generator as {\tt{professorName.charAt(randomNumber)}}.
 
 \end{document}
