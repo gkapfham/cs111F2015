@@ -36,21 +36,35 @@ may discuss programs with others, but programs that are nearly identical
 to others will be taken as evidence of violating the Honor Code.
 \end{itemize}
 
-\vspace{-0.05in}
+\vspace{-0.15in}
 \subsection*{Reading Assignment}
 \vspace{-0.05in}
-To learn more about Java strings and random numbers, review Sections 3.1--3.5 in your textbook. Also carefully study the sample program
-described in the section called {\tt A Sample Program} in this lab assignment document.
+
+To learn more about Java strings and random numbers, review Sections 3.1--3.5 in your textbook. To learn more about how
+to create and use Java classes, you may also want to review Sections 4.1 and 4.2, focusing on accepted conventions for
+organizing a class. Finally, you should carefully study the sample program described in the section in this assignment
+called ``{A Sample Program}''.
 
 \vspace{-0.05in}
-\subsection*{Create a new directory and a Java program}
+\subsection*{Create a New Directory and a Java Program}
 \vspace{-0.05in}
-In your own {\tt cs111F2014-<your user name>} repository inside {\tt labs} directory, create a directory called {\tt lab5} by typing ``{\tt mkdir lab5}''. Type ``{\tt cd lab5}'' to move to the new directory.  Then using {\tt gvim} create a Java program named {\tt Lab5.java}. See the section called {\tt DNA Manipulation} in this document for the specifics on what you need to do in your {\tt Lab5.java} program.
+
+You and your partner are responsible for implementing a complete solution to a real-world problem involving the analysis
+of DNA strings in the field of bioinformatics. To start, you and your partner should create a new Git repository hosted
+by Bitbucket. This new repository must adhere to the naming convention {\tt
+<first-partner-username>-<second-partner-username>-cs111F2015-lab6}. After creating the repository with the correct
+name, please share it with each other and with the course instructor. Now, make sure that you can both access this
+repository through Git commands such as {\tt clone}, {\tt pull}, {\tt add}, {\tt commit}, and {\tt push}. Additionally,
+you should make your own {\tt lab6/} directory in your personal repository and make sure that, by the end of the
+laboratory assignment, all of the files that you collaboratively created are also available in this directory. Please
+see the course instructor or one of the teaching assistants if you cannot complete these first two steps.
+
+% See the section called {\tt DNA Manipulation} in this document for the specifics on what you need to do in your {\tt Lab5.java} program.
 
 \vspace{-0.05in}
 \subsection*{Study a Sample Program}
 \vspace{-0.05in}
-Go to the shared course repository and pull {\tt StringDemo.java}. Copy this program into {\tt lab5} directory
+Go to the shared course repository and pull {\tt StringDemo.java}. Copy this program into {\tt lab6} directory
 inside your own {\tt cs111F2014-<your user name>} repository.
 Open this program and examine it to see what it does. Then
 run it a few times with different input strings.\\
@@ -66,13 +80,20 @@ What other lines in the program need to be changed?
 What other lines in the program need to be changed?
 \item
 Suppose the line:
+
+\vspace*{-.2in}
 \begin{center}
 \verb$s1 = s1.toUpperCase();$
 \end{center}
+\vspace*{-.2in}
+
 is changed to:
+
+\vspace*{-.2in}
 \begin{center}
 \verb$s1.toUpperCase();$
 \end{center}
+
 Will the program still correctly display the upper-case version of {\tt s1}?
 \item
 Do the statements {\tt s1.toUpperCase();} and {\tt s1.toLowerCase();}
@@ -210,10 +231,10 @@ letter it replaces.
 Here are two sample runs. You will get different values, of course, since the
 changes are random, but the structure of the output will be the same:
 \begin{verbatim}
-     aldenv5:lab5 jjumadinova$ java Lab5
+     aldenv5:lab6 jjumadinova$ java ManipulateDNA
      Janyl Jumadinova
-     Lab 5
-     Thu Oct 2 12:51:58 EDT 2014
+     Lab 6
+     Thu Sep 30 12:51:58 EDT 2015
 
      Enter a string containing only C, G, T, and A: actg
      Complement of ACTG is TGAC
@@ -222,10 +243,10 @@ changes are random, but the structure of the output will be the same:
      Changing position 2 gives ACGG
 \end{verbatim}
 \begin{verbatim}
-     aldenv5:lab5 jjumadinova$ java Lab5
+     aldenv5:lab6 jjumadinova$ java ManipulateDNA
      Janyl Jumadinova
-     Lab 5
-     Thu Oct 2 12:52:58 EDT 2014
+     Lab 6
+     Thu Sep 30 12:52:58 EDT 2015
 
      Enter a string containing only C, G, T, and A: actg
      Complement of ACTG is TGAC
@@ -252,24 +273,33 @@ is neat (no missing spaces, etc.) and that your program is neat (indenting, etc.
 \vspace{-0.05in}
 \subsection*{Required Deliverables}
 \vspace{-0.05in}
-In addition to turning in printed and signed versions, for this assignment you are invited to submit electronic versions of the following deliverables through the Bitbucket repository. As you complete this step, you should make sure that you
-created a {\tt lab5/} directory within the Git repository.  Then, you can save all of the required deliverables in the
-{\tt lab5/} directory---please see the course instructor or a teaching assistant if you are not able to create your
+
+In addition to turning in printed and signed versions, for this assignment you are invited to submit electronic versions
+of the following deliverables through the Bitbucket repository. As you complete this step, you should make sure that you
+created a {\tt lab6/} directory within the Git repository.  Then, you can save all of the required deliverables in the
+{\tt lab6/} directory---please see the course instructor or a teaching assistant if you are not able to create your
 directory properly.
 
 \begin{enumerate}
-	\item A completed, properly commented and formatted {\tt Lab5.java} program.
 
-        \item An output document containing at least \textbf{three different} outputs obtained after running {\tt Lab5} in the terminal window at least three times.
+  \item A completed, properly commented and formatted {\tt ManipulateDNA.java} program.
 
-        \item A document describing the strategy your team developed for completing this assignment and the work each team member has completed. While the {\tt Lab5} program and the output file have to be the same for both members of the same team, you may include any challenges you individually faced in this document.
+  \item An output document containing at least \textbf{three different} outputs obtained after running {\tt
+    ManipulateDNA} in the terminal window at least three times.
+
+  \item A document describing the strategy your team developed for completing this assignment and the work each
+    team member has completed. While the {\tt Lab6} program and the output file have to be the same for both
+    members of the same team, you may include any challenges you individually faced in this document.
+
 \end{enumerate}
 
 \vspace{-0.1in}
-Share your program, the output file and the document describing your team work with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt
-git commit}'', and ``{\tt git push}'' commands. When you are done, please ensure that the Bitbucket Web site has
-a {\tt lab5/} directory in your repository with the two files called {\tt Lab5.java}, {\tt output} and {\tt report}. You should see
-the instructor if you have questions about assignment submission.
+
+Share your program, the output file and the document describing your team work with me through your Git repository by
+correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git push}'' commands. When you are done, please
+ensure that the Bitbucket Web site has a {\tt lab6/} directory in your repository with the two files called {\tt
+ManipulateDNA.java}, {\tt output}, and {\tt report}. You should see the instructor if you have questions about
+assignment submission.
 
 \vspace{-0.05in}
 \subsection*{A Quick Tutorial on Random Number Generation}
@@ -286,16 +316,14 @@ and then create an instance of this class:
 \verb$Random rand = new Random();$
 \end{center}
 
-The three most useful methods in the {\tt Random} class are {\tt nextInt}, {\tt nextFloat} and {\tt nextDouble}. If {\tt rand} is the name of our random number
-generator (it can be called something else) and {\tt n} is a positive integer, {\tt rand.nextInt(n)}
-produces an {\tt int} in the range 0, \ldots, {\tt n}-1 and {\tt
-rand.nextDouble()} and {\tt rand.nextFloat()} produce a {\tt double} and a {\tt float} respectively in the range from 0 to 1 (not
-including 1).
+The three most useful methods in the {\tt Random} class are {\tt nextInt}, {\tt nextFloat} and {\tt nextDouble}. If {\tt
+rand} is the name of our random number generator (it can be called something else) and {\tt n} is a positive integer,
+{\tt rand.nextInt(n)} produces an {\tt int} in the range 0, \ldots, {\tt n}-1 and {\tt rand.nextDouble()} and {\tt
+rand.nextFloat()} produce a {\tt double} and a {\tt float} respectively in the range from 0 to 1 (not including 1).
 
-By being clever, we can get different ranges---here are a few
-examples. In the Java code, assume {\tt i} is an {\tt int} variable,
-{\tt d} is a {\tt double} variable, and {\tt rand} is an object of the
-{\tt Random} class:
+By being clever, we can get different ranges---here are a few examples. In the Java code, assume {\tt i} is an {\tt int}
+variable, {\tt d} is a {\tt double} variable, and {\tt rand} is an object of the {\tt Random} class:
+
 \begin{center}
 \begin{tabular}{p{2.5in}p{3.5in}}
 \multicolumn{1}{c}{\bf Desired Range} & \multicolumn{1}{c}{\bf Java
