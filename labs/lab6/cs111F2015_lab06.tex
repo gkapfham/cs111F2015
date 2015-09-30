@@ -64,20 +64,20 @@ see the course instructor or one of the teaching assistants if you cannot comple
 \vspace{-0.05in}
 \subsection*{Study a Sample Program}
 \vspace{-0.05in}
-Go to the shared course repository and pull {\tt StringDemo.java}. Copy this program into {\tt lab6} directory
-inside your own {\tt cs111F2014-<your user name>} repository.
-Open this program and examine it to see what it does. Then
-run it a few times with different input strings.\\
+
+Go to the shared course repository and pull {\tt StringDemo.java}. Copy this program into {\tt lab6/} directory inside
+your own {\tt cs111F2015-<your user name>} repository.  Open this program and examine it to see what it does. Then run
+it a few times with different input strings.\\
 
 \noindent{\bf Questions to Discuss with Your Group Member}
 (not to be handed in):
 \begin{itemize}
 \item Where is the random number generator {\em declared}?
 \item Suppose you name the random number generator {\tt wilbur} instead of {\tt r}.
-What other lines in the program need to be changed?
+What other lines in the program need to be changed? Why do you have to change these lines?
 \item Where is the scanner {\em declared}?
 \item Suppose you name the scanner {\tt orville} instead of {\tt scan}.
-What other lines in the program need to be changed?
+What other lines in the program need to be changed? Why do you have to change these lines?
 \item
 Suppose the line:
 
@@ -97,7 +97,7 @@ is changed to:
 Will the program still correctly display the upper-case version of {\tt s1}?
 \item
 Do the statements {\tt s1.toUpperCase();} and {\tt s1.toLowerCase();}
-change the contents of {\tt s1}? (See previous question!)
+change the contents of {\tt s1}? (See previous question for more details about this matter!)
 \item
 Suppose the user types {\tt abcde} when asked to enter a string.
 \begin{itemize}
@@ -113,7 +113,8 @@ How many different ways are there to insert an ``{\tt x}'' into the string
 \item
 According to the book, the {\tt nextInt(num)} method of the {\tt Random}
 class returns a random number in the range 0 to {\tt num - 1}.
-List all the values that could be returned by ``{\tt r.nextInt(5)}''.
+List all the values that could be returned by ``{\tt r.nextInt(5)}''. Please ask the course instructor if you cannot
+make this list.
 \item
 Answer the question in the comment next to the statement ``\verb$location = r.nextInt(len+1);$''.
 \end{itemize}
@@ -158,9 +159,9 @@ Explain, in English words, what the following statement does:
 \verb$c = "PQRST".charAt(r.nextInt(5));$
 \end{center}
 \end{itemize}
-Don't continue with the assignment until you understand the answers to all the
-questions above! {\em Please} feel free to discuss these with your
-classmates, teaching assistants and your instructor!
+
+\noindent Don't continue with the assignment until you understand the answers to all these questions!  You can discuss
+these questions with your partner, the teaching assistants, and your instructor.
 
 \vspace{-0.05in}
 \subsection*{DNA Manipulation Program}
