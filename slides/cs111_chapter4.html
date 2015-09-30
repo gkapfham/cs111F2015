@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Computer Science 111: Introduction to Computer Science 111</title>
+
+    <meta name="description" content="Teaching Slides for Computer Science 111">
+    <meta name="author" content="Gregory M. Kapfhammer">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night-gkapfham.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <!-- <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/tomorrow&#45;night&#45;bright.css">         -->
+    <!-- <link rel="stylesheet" href="lib/css/tomorrow&#45;night&#45;bright.css"> -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Install Font Awesome and the Google Web fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Merriweather|Merriweather+Sans' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+      if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+      }
+    </script>
+
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+      <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <div class="slides">
+
+        <section data-background-transition="none" data-background="http://farm4.static.flickr.com/3161/2681686220_1f39f404f4_z.jpg" style="background: rgba(29,31,33,0.9)">
+          <h1>Computer Science 111:</h1>
+          <h3>Introduction to Computer Science I</h3>
+          <h3>Chapter Four</h4>
+          <p>Gregory M. Kapfhammer</p>
+          <br /><small><a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">creative commons licensed ( BY-NC-SA )</a> <a title="Thinkin' about the code" href="http://flickr.com/photos/yourdon/2681686220">flickr photo</a> shared by <a href="http://flickr.com/people/yourdon">Ed Yourdon</a></small>
+        </section>
+
+        <section>
+          <h1 id="classes_and_objects">Classes and Objects</h1>
+          <p class="fragment">Past: Using and modifying Java classes!</p>
+          <p class="fragment">Future: Writing our own Java classes!</p>
+          <p class="fragment">An object has <b class="sky">state</b>, defined by values of <b class="sky">attributes</b></p>
+          <p class="fragment">An object has <b class="orange">behavior</b>, defined by the <b class="orange">operations</b></p>
+        </section>
+
+        <section>
+          <h1 id="rolling_dice">Rolling Dice</h1>
+          <p class="fragment">We can define two classes: Die and RollingDice. Why?</p>
+          <p class="fragment">Run the <code>git pull</code> command in your "share" repository!</p>
+          <p class="fragment">Now, find the <code>class/source/chapter04/</code> directory.</p>
+          <p class="fragment">Use GVim to study the source code of this system.</p>
+          <p class="fragment">Draw a picture to explain how you understand this code.</p>
+          <p class="fragment">Compile and run this program. What is the output?</p>
+        </section>
+
+        <section>
+          <h1 id="anatomy_of_a_class">Anatomy of a Class</h1>
+          <p class="fragment">Find all of the following parts of Die and RollingDice!</p>
+          <p class="fragment">Data declarations</p>
+          <p class="fragment">Method declarations</p>
+          <p class="fragment">Constructor declaration</p>
+          <p class="fragment">Instance data</p>
+          <p class="fragment">Main method</p>
+        </section>
+
+        <section>
+          <h1 id="encapsulation">Encapsulation</h1>
+          <p class="fragment">An object should be <b class="orange">self-governing</b></p>
+          <p class="fragment">It should be difficult to "reach in" to instance data</p>
+          <p class="fragment">Why is this an important issue to enforce?</p>
+          <p class="fragment">Let's review Figure 4.5 on page 169!</p>
+          <p class="fragment">Visibility modifiers: <b class="sky">public</b> and <b class="green">private</b></p>
+          <p class="fragment">See Figure 4.6 to understand the impact of visibility!</p>
+          <p class="fragment">This about methods as either <b class="scarlet">accessors</b> or <b class="plum">mutators</b></p>
+        </section>
+
+        <section>
+          <h1 id="anatomy_of_a_method">Anatomy of a Method</h1>
+          <p class="fragment">Run the <code>git pull</code> to get new code!</p>
+          <p class="fragment">Review the source code of <code>Transaction</code> and <code>Account</code></p>
+          <p class="fragment">What is the purpose of a <b class="sky">return</b> statement?</p>
+          <p class="fragment">Please find at least two <b class="sky">return</b> statements in the code</p>
+          <p class="fragment">Type of the return = type of the returned variable</p>
+        </section>
+
+        <section>
+          <h1 id="parameters">Parameters</h1>
+          <p class="fragment">Please find the parameter list for one of the methods</p>
+          <p class="fragment">What do you notice about each entry in the parameter list?</p>
+          <p class="fragment">Wait! Let's find the <b class="orange">formal</b> and <b class="green">actual</b> parameters</p>
+          <p class="fragment">What is the purpose of <b class="orange">formal</b> and <b class="green">actual</b> parameters?</p> 
+          <p class="fragment">Methods can also define local data. Can you find any?</p>
+          <p class="fragment">Make sure that you fully understand the working example!</p>
+        </section>
+
+        <section>
+          <h1 id="constructors">Constructors</h1>
+          <p class="fragment">A constructor is <b class="sky">invoked</b> when an object is <b class="sky">created</b></p>
+          <p class="fragment">The name of the constructor is the same as the class</p>
+          <p class="fragment">The constructor <b class="orange">returns</b> the type of the class itself</p>
+          <p class="fragment">The return type of the constructor is not explicitly stated</p>
+        </section>
+
+        <section>
+          <h1 id="constructors">Constructors</h1>
+          <p class="fragment">The <b class="orange">default</b> constructor already exists!</p>
+          <p class="fragment">But, it makes an object without assigning values</p>
+          <p class="fragment">Please think about the <b class="green">initial</b> state of your objects!</p>
+          <p class="fragment">Can you <b class="scarlet">find</b> a constructor in the provided source code?</p>
+        </section>
+
+        <section>
+          <h1 id="graphical_objects">Graphical Objects</h1>
+          <p class="fragment">Created in the same was a other objects</p>
+          <p class="fragment">You still interact with them by <b class="sky">calling</b> methods</p>
+          <p class="fragment">Organize the drawing of distinct visual objects in methods</p>
+          <p class="fragment">Refer to the lab assignment and Section 4.9!</p>
+        </section>
+
+        <section>
+          <h1 id="graphical_user_interfaces">Graphical User Interfaces</h1>
+          <p class="fragment">Three kinds of objects: components, events, listeners</p>
+          <p class="fragment">The focus is on <b class="sky">event-driven</b> programming</p>
+          <p class="fragment">What kinds of GUI components are available?</p>
+          <p class="fragment">Section 4.8: you can add <b class="plum">buttons</b>!</p>
+          <p class="fragment">Section 4.9: what about <b class="orange">text</b> <b class="orange">fields</b>?</p>
+          <p class="fragment">But, there are also sliders, menus, and others!</p>
+        </section>
+
+      </div>
+
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.min.js"></script>
+
+      <script>
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          center: true,
+
+          theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+          transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/none/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+          dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+              { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+          ]
+        });
+
+      </script>
+
+  </body>
+</html>
