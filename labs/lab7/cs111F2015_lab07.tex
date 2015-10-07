@@ -14,34 +14,34 @@ source code to an existing system. Ultimately, you will create a working program
 \subsection*{General Guidelines for Labs}
 
 \begin{itemize}
-\item
-{\bf Work on the Alden Hall computers.} If you want to work on a different
-machine, be sure to transfer your programs to the Alden
-machines and re-run them before submitting.
-\item
-{\bf Update your repository often!} You should add, commit,
-and push your updated files each time you work on them.  I will not grade
-your programs until the due date has passed.
-\item
-{\bf Review the Honor Code policy.} You
-may discuss programs with others, but programs that are nearly identical
-to others will be taken as evidence of violating the Honor Code.
+  \item
+    {\bf Work on the Alden Hall computers.} If you want to work on a different
+    machine, be sure to transfer your programs to the Alden
+    machines and re-run them before submitting.
+  \item
+    {\bf Update your repository often!} You should add, commit,
+    and push your updated files each time you work on them.  I will not grade
+    your programs until the due date has passed.
+  \item
+    {\bf Review the Honor Code policy.} You
+    may discuss programs with others, but programs that are nearly identical
+    to others will be taken as evidence of violating the Honor Code.
 \end{itemize}
 
 \vspace*{-.2in}
 \subsection*{Reading Assignment}
 
 After reviewing all of the assignment sheets for the past laboratory and practical sessions and the course slides and
-notes, you should read Sections 3.5 through 3.8 of your textbook. To enhance your understanding of some points in this
-lab you may additionally review Figures 4.7 and 4.8
+notes, you should examine Sections 3.5 through 3.8 of your textbook. To enhance your understanding of some points in
+this lab you may additionally review Figures 4.7 and 4.8
 
 \vspace*{-.1in}
 \subsection*{Participating in a ``Bug Hunt''}
 
-After changing into the {\tt cs111F2014-share/} directory, which contains our course's version control repository, you
+After changing into the {\tt cs111F2015-share/} directory, which contains our course's version control repository, you
 should type the command ``{\tt git pull}'' to download the source code for this laboratory assignment. Now, change into
-the {\tt labs/lab6/} directory and use {\tt gvim} to study the source code of the {\tt CommandLineGeometer.java} and {\tt
-  GeometricCalculator.java} files. What methods do these classes provide? How do they work? Does any of this code look
+the {\tt labs/lab7/} directory and use {\tt gvim} to study the source code of the {\tt CommandLineGeometer.java} and {\tt
+GeometricCalculator.java} files. What methods do these classes provide? How do they work? Does any of this code look
 incorrect? Why?
 
 After carefully reviewing the source code and PP 3.6, 3.7, and 3.9 on page 158 of your textbook and then compiling and
@@ -55,26 +55,26 @@ mistake in this method.  Can you find and fix it? How did you know that this was
 code of the method for calculating the volume of a cylinder, you will notice that there is another defect lurking in the
 source code. Wait! If you carefully study the way in which the {\tt CommandLineGeometer} calls the method
 provided by the {\tt GeometricCalculator} and then displays the resulting output, you will realize that there is another
-bug in this program. Make sure you have found all of the problems before continuing with this assignment.
+bug in this program. Make sure you have found all of the problems before continuing with this laboratory assignment.
 
 \vspace*{-.1in}
 \subsection*{Extending the Geometry Calculator}
 
 \begin{sloppypar}
-After reviewing the aforementioned programming projects on page 158 of your textbook, you will also notice that the {\tt
+  After reviewing the aforementioned programming projects on page 158 of your textbook, you will also notice that the {\tt
   GeometricCalculator.java} does not contain methods for calculating the surface area of a sphere or a cylinder.  While
-avoiding the types of mistakes that you corrected in the previous phase of this assignment, please add in new methods
-to perform these calculations. In addition, you will need to add appropriate input and output statements and method
-calls to the {\tt CommandLineGeometer} to ensure that the entire program works correctly. For instance, you will need to
-implement a new method called {\tt calculateSphereSurfaceArea} to the {\tt GeometricCalculator.java} file and then add
-input and output code to the {\tt CommandLineGeometer.java} file. Whenever possible, try to follow the correct
-pattern established in the given source code. Please see the course instructor if you have questions!
+  avoiding the types of mistakes that you corrected in the previous phase of this assignment, please add in new methods
+  to perform these calculations. In addition, you will need to add appropriate input and output statements and method
+  calls to the {\tt CommandLineGeometer} to ensure that the entire program works correctly. For instance, you will need to
+  implement a new method called {\tt calculateSphereSurfaceArea} to the {\tt GeometricCalculator.java} file and then add
+  input and output code to the {\tt CommandLineGeometer.java} file. Whenever possible, try to follow the correct
+  pattern established in the given source code. Please see the course instructor if you have questions!
 \end{sloppypar}
 
 As you continue to critically review the source code of the {\tt CommandLineGeometer}, you will notice that it does not
 always consistently produce output for the user.  For example, even though it displays the user-input radius before
 calling {\tt calculateSphereVolume}, it does not appropriately display the sides of the triangle for the {\tt
-  computeTriangleArea} method---can you please add in this feature? Moreover, none of the output of the {\tt double}
+computeTriangleArea} method---can you please add in this feature? Moreover, none of the output of the {\tt double}
 variables in the {\tt CommandLineGeometer} is formatted in a consistent fashion. To solve this problem, you should use
 one of the techniques described in Section 3.6 of your textbook to format the output of all decimals to contain four
 decimal points. For instance, you may consider creating an instance of the {\tt DecimalFormat} class.
@@ -95,17 +95,17 @@ You will notice that this laboratory assignment organizes the methods into two s
 past assignments and in-class exercises. In particular, the {\tt CommandLineGeometer} provides the user interface for
 our program and the {\tt GeometricCalculator} furnishes the methods that perform the required computations.  If you want
 to make changes to the way in which the program accepts input or produces output, then you will need to modify the {\tt
-  CommandLineGeometer}. Otherwise, if you want to modify the way in which the program performs a computation, or add a
+CommandLineGeometer}. Otherwise, if you want to modify the way in which the program performs a computation, or add a
 new computation, then you must make changes to the {\tt GeometricCalculator}. Overall, these two Java classes complete
 their work by following a pattern similar to that which is outlined in Figures 4.7 and 4.8 of your textbook. Please see
 the instructor if you have questions about this approach.
 
 Additionally, it is important to note that this assignment asks you to add new methods to the {\tt
-  GeometricCalculator.java} file.  To complete this task, you should directly copy the pattern that you see in the
+GeometricCalculator.java} file.  To complete this task, you should directly copy the pattern that you see in the
 provided methods, only making changes to implement the new functionality.  Also, these methods accept parameters, of
 type {\tt double}, that are passed from the {\tt main} method in the {\tt CommandLineGeometer} to one of the
 ``calculate'' methods in the {\tt GeometricCalculator}. You should also notice that all of the methods return a {\tt
-  double} variable to the method that calls it.  Intuitively, the parameters are the ``input'' to a method and the return
+double} variable to the method that calls it.  Intuitively, the parameters are the ``input'' to a method and the return
 values are the ``output'' of the method.  When you create the required new methods, you should follow the pattern of the
 previously implemented method, ensuring that you have the same types of input and output.
 
@@ -114,34 +114,35 @@ previously implemented method, ensuring that you have the same types of input an
 
 This assignment invites you to submit electronic versions of the following deliverables through the Bitbucket repository
 that you created during the first practical assignment.  As you complete this step, you should make sure that you
-created a {\tt lab6/} directory within your Git repository.  Then, you can save all of the required deliverables in the
-{\tt lab6/} directory---please see the course instructor or a teaching assistant if you are not able to create your
+created a {\tt lab7/} directory within your Git repository.  Then, you can save all of the required deliverables in the
+{\tt lab7/} directory---please see the course instructor or a teaching assistant if you are not able to create your
 directory properly.  Additionally, students should submit signed and printed versions of all the required deliverables.
 
 \vspace*{-.05in}
 \begin{enumerate}
     \setlength{\itemsep}{0pt}
-      \item A completed, properly commented and formatted {\tt CommandLineGeometer} class.
 
-        \item A completed, properly commented and formatted {\tt GeometricCalculator} class.
+  \item A completed, properly commented and formatted {\tt CommandLineGeometer} class.
 
-        \item The output from running {\tt CommandLineGeometer} in the terminal. You may use {\tt gvim} to save
-          your output as follows: using the mouse, select everything from the ``{\tt java CommandLineGeometer}'' command
-          to the end of your output.  Right-click on the selected text and copy it.  Type ``{\tt gvim output}''---note
-          that this {\em not} a Java program!---and use the ``Edit/Paste'' menu item to paste the output into the file.
-          Now, use ``{\tt :w}'' or the ``File/Save'' menu item to save this file.
+  \item A completed, properly commented and formatted {\tt GeometricCalculator} class.
 
-        \item A written reflection on the challenges that you faced during the completion of this laboratory assignment.
-          Again using {\tt gvim} text editor, you can input your reflections into a file called ``{\tt reflection}'' and
-          then save this file in your Bitbucket repository.
+  \item The output from running {\tt CommandLineGeometer} in the terminal. You may use {\tt gvim} to save
+    your output as follows: using the mouse, select everything from the ``{\tt java CommandLineGeometer}'' command
+    to the end of your output.  Right-click on the selected text and copy it.  Type ``{\tt gvim output}''---note
+    that this {\em not} a Java program!---and use the ``Edit/Paste'' menu item to paste the output into the file.
+    Now, use ``{\tt :w}'' or the ``File/Save'' menu item to save this file.
+
+  \item A written reflection on the challenges that you faced during the completion of this laboratory assignment.
+    Again using the {\tt gvim} text editor, you can input your reflections into a file called ``{\tt reflection}''
+    and then save this file in your Bitbucket repository.
 
 \end{enumerate}
 \vspace*{-.05in}
 
 Share your program and the output file with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt
-  git commit}'', and ``{\tt git push}'' commands. When you are done, please ensure that the Bitbucket Web site has a
-{\tt lab6/} directory in your repository with the four files called {\tt CommandLineGeometer.java}, {\tt
-  GeometricCalculator.java}, {\tt output}, and {\tt reflection}.
+git commit}'', and ``{\tt git push}'' commands. When you are done, please ensure that the Bitbucket Web site has a
+{\tt lab7/} directory in your repository with the four files called {\tt CommandLineGeometer.java}, {\tt
+GeometricCalculator.java}, {\tt output}, and {\tt reflection}.
 
 In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
 for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
