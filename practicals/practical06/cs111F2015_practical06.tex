@@ -30,7 +30,7 @@ course instructor, please take your own steps to answering them as you complete 
 \begin{sloppypar}
 Using the ``{\tt git pull}'' command, download the files {\tt Octopus.java}, {\tt Utensil.java}, and {\tt Practical6.java}
 from the course repository. Using the strategy that was described in a previous assignment, please copy these files into
-your own Bitbucket repository in a directory called {\tt practical05/}. Study these programs first and make sure you
+your own Bitbucket repository in a directory called {\tt practical06/}. Study these programs first and make sure you
 understand them. Can you better understand the structure and behavior of the methods provided by these classes by
 drawing a technical diagram like the one in Figure 4.7 of your textbook? To compile them, you can type ``{\tt javac
   Practical6.java}'' in your terminal window; to run them, please type ``{\tt java Practical6}''.
@@ -50,11 +50,11 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
 %     int}.  This is the age of the octopus. Save this in the appropriate instance variable (imitating what was done for
 %     the name).
 
-  \item Please find the constructor in the {\tt Octopus.java} file.  You will notice that, even though an
-    instance of the {\tt Octopus} class has instance variables like {\tt weight} and {\tt name}, these variables are not
-    initialized by the constructor. Assuming that the value of $-1$, indicating that the variable has not yet been set,
-    is an acceptable starting value for both variables, please add to the constructor assignment statements initializing
-    them to $-1$.
+  \item Please find the constructor in the {\tt Octopus.java} file.  You will notice that, even though an instance of
+    the {\tt Octopus} class has instance variables like {\tt weight} and {\tt name}, these variables are not initialized
+    by the constructor. Assuming that the value of $-1$, indicating that the variable has not yet been set, is an
+    acceptable starting value for both of these variables, please add to the constructor assignment statements
+    initializing them to $-1$.
 
 % \item \noindent Edit the file {\tt Practical6.java} and look for the place where variable {\tt ocky} is defined to be a
 %   {\tt new Octopus}. Add an ``age'' to this so that we are specifying two things, not one, in the construction.  Delete
@@ -63,8 +63,9 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
   \item You should also notice that the current constructor for {\tt Octopus} only accepts the ``{\tt String n}''
     parameter that allows you to specify the name of the object.  Since an {\tt Octopus} also has an {\tt age} and a
     {\tt weight}, you should write a new constructor that has three formal parameters---one for each of these instance
-    variables---and initializes all of them correctly. You can use the ``{\tt Account}'' example in Section 4.4 as a
-    source of inspiration for the way in which you add an improved constructor for the {\tt Octopus} class.
+    variables---and initializes all of them correctly. You can use the ``{\tt Account}'' example in Section 4.4, which
+    we discussed in class, as a source of inspiration for the way in which you add an improved constructor for {\tt
+    Octopus}.
 
 \end{itemize}
 
@@ -102,7 +103,7 @@ drawing a technical diagram like the one in Figure 4.7 of your textbook? To comp
 %     int}.  This is the age of the octopus. Save this in the appropriate instance variable (imitating what was done for
 %     the name).
 
-  \item Please study the source code of {\tt Practical6.java} to find the location where it uses a static method to
+  \item Please study the source code of {\tt Practical6.java} to find the location where it uses a ``static'' method to
     configure the Lightweight Java Visualizer class called {\tt LJV}. Now, find the method calls that produce a
     visualization of the {\tt ocky} instance of the {\tt Octopus} class and notice the name of the file that will
     contain the visualization. In your terminal, you can type ``{\tt evince ocky-before.pdf}'' to see what {\tt ocky}
