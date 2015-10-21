@@ -10,7 +10,7 @@ Due Thursday, 28 October by 2:30pm }
 To enhance your experience with designing and implementing your own Java classes, including the completion of tasks such
 as picking the right instance variables and creating both the constructors and the methods.  Additionally, to practice
 using compound {\tt if/else} statements as part of a solution to a real-world problem involving a popular and well-known
-game.
+game called Sudoku.
 
 \vspace{-0.15in}
 \subsection*{General Guidelines for Labs}
@@ -21,8 +21,8 @@ game.
 machine, be sure to transfer your programs to the Alden
 machines and re-run them before submitting.
 \item
-  {\bf Update your repository often!} You should {\tt add}, {\tt commit}, 
-  and {\tt push} your updated files each time you work on them.  I will not grade 
+  {\bf Update your repository often!} You should {\tt add}, {\tt commit},
+  and {\tt push} your updated files each time you work on them.  I will not grade
 your programs until the due date has passed.
 \item
 {\bf Review the Honor Code policy.} You
@@ -34,8 +34,8 @@ to others will be taken as evidence of violating the Honor Code.
 \subsection*{Reading Assignment}
 \vspace{-0.05in}
 
-To learn more about {\tt if} statement and boolean expressions, review Sections 5.1--5.3; to recall material on
-constructing classes and methods, read Sections 4.1--4.5.  Students who are not familiar with the Sudoku game are
+To learn more about {\tt if} statement and boolean expressions, read Sections 5.1--5.3; to recall material on
+constructing classes and methods, review Sections 4.1--4.5.  Students who are not familiar with the Sudoku game are
 encouraged to examine \url{http://en.wikipedia.org/wiki/Sudoku}.
 
 \vspace{-0.1in}
@@ -53,7 +53,8 @@ assignment. Remember to use the Java program template from a previous lab!
 
 Sudoku is a logic-based placement puzzle. The aim of this puzzle is to enter a numerical digit from 1 through 9 in each
 cell of a 9x9 grid made up of 3x3 subgrids (called the ``regions''), starting with various digits given in some cells
-(called the ``givens''). Each row, column, and region must contain only one instance of each valid numeral.
+(called the ``givens''). Each row, column, and region must contain only one instance of each valid numeral (i.e., a
+numerical value between 1 and 9).
 
 \noindent For this lab, you are going to write a Sudoku validator for 4x4 grids made up of 2x2 regions instead of 9x9
 grids made up of 3x3 regions.  In contrast to the previously explained full grids, Sudoku puzzles that use 4x4 grids
@@ -77,10 +78,10 @@ row, and column.  An example run of ``{\tt SudokuChecker}'' can be seen below.
 \begin{verbatim}
 Welcome to the Sudoku Checker!
 
-This program checks simple and small 4x4 Sudoku grids for correctness. 
+This program checks simple and small 4x4 Sudoku grids for correctness.
 Each column, row, and 2x2 region contains the numbers 1 through 4 only once.
 
-To check your Sudoku, enter your board one row at a time, 
+To check your Sudoku, enter your board one row at a time,
 with each digit separated by a space.  Hit ENTER at the end of a row.
 
 Enter Row 1: 3 2 4 1
@@ -112,7 +113,7 @@ SUDOKU GRID IS VALID!
 region.  In other words, don't worry about validating the user's input to make sure they only enter the digits 1, 2, 3,
 or 4 and only enter them once per row, column, and region.  You simply need to check that each row, column, and region
 adds up to 10. This simplistic type of checking will, however, allow some bad Sudoku grids to be validated as
-good---this is acceptable. 
+good---this is acceptable.
 
 \noindent Rows, columns, and regions are identified as found below:\\
 
@@ -121,7 +122,9 @@ good---this is acceptable.
 
 \subsubsection*{{\tt SudokuCheckerMain} Class}
 
-To use the {\tt SudokuChecker} class, follow this template for the {\tt SudokuCheckerMain.java} file:
+To use the {\tt SudokuChecker} class, adhere to the following template for the {\tt SudokuCheckerMain.java} file. Please
+note that there are some ``TODO'' steps that you must complete!
+
 \begin{verbatim}
 public class SudokuCheckerMain
 {
@@ -137,16 +140,19 @@ public class SudokuCheckerMain
 
 \subsubsection*{{\tt SudokuChecker} Class}
 
-\noindent The basic structure of {\tt SudokuChecker.java} is as follows:
+\noindent The basic structure of {\tt SudokuChecker.java} is as follows. Again, please note that there are some ``TODO''
+steps that you must complete! Please see the course instructor or a teaching assistant if you have questions about how
+to add the data members and implement the required methods.
+
 \begin{verbatim}
 import java.util.Scanner;
 
 public class SudokuChecker
 {
-     // TODO: put private data members here
-     // TODO: put constructor here
-     // TODO: put getGrid() here
-     // TODO: put checkGrid() here
+     // TODO: declare private data members
+     // TODO: define the constructor
+     // TODO: implement the getGrid() method
+     // TODO: implement the checkGrid() method
 }
 \end{verbatim}
 The UML diagram for {\tt SudokuChecker} is:
@@ -186,52 +192,62 @@ $<<constructor>>$ SudokuChecker( )\\
 {\tt w1, w2, w3, w4} &  \\
 {\tt x1, x2, x3, x4} & \\
 {\tt y1, y2, y3, y4} & \\
-{\tt z1, z2, z3, z4}	&  Private data members that will store the numbers the user inputs.  Variables {\tt w1} through {\tt w4}
+{\tt z1, z2, z3, z4}    &  Private data members that will store the numbers the user inputs.  Variables {\tt w1} through {\tt w4}
 are for the first row, {\tt x1} through {\tt x4} are for the second row
 and so on. You should not have any other private data members in your class.\\
 \hline
-SudokuChecker()	&This is the constructor.  It should initialize each of the private data members to the value of 0, indicating
+SudokuChecker() &This is the constructor.  It should initialize each of the private data members to the value of 0, indicating
 that the user has not yet assigned a value to the data member. \\
 \hline
 
-getGrid()	& This public method should read the Sudoku grid from the user row by row, using spaces between values in each row.\\
-\hline 
-checkGrid() &	This public method uses the private data members to test whether or not the given values are a valid Sudoku grid.\\
+getGrid()   & This public method should read the Sudoku grid from the user row by row, using spaces between values in each row.\\
+\hline
+checkGrid() &   This public method uses the private data members to test whether or not the given values are a valid Sudoku grid.\\
 & Your method does not have to check for the numbers 1 through 4 being used uniquely in each row, column, and region.
 In other words, don't worry about validating the user's input to make sure they only enter the digits 1, 2, 3, or 4 and only
-enter them once per row, column, and region. \\ 
+enter them once per row, column, and region. \\
 & When producing your output, you must first validate the regions, then the rows, and then the columns.  Each region,
 row, and column validation should appear on a line by itself. \\
 \hline
 \end{tabular}
 
 \vspace{-0.05in}
-\subsection*{Points to Think About}
+\subsection*{Important Points to Consider}
 \vspace{-0.05in}
 
 Since we have not talked about programming concepts such as arrays yet---in fact, you should not use them to complete
 this assignment---you will need to input your 16 values into 16 separate variables.  Some suggestions would be {\tt w1},
 {\tt w2}, {\tt w3}, and {\tt w4} for the first row and then {\tt x1}, {\tt x2}, {\tt x3}, and {\tt x4} for the second
-row, and so on.  Once you validate that one row is good or not good, the rest of the program should essentially be a
-matter of ``copy and paste'', replacing variables where appropriate.  The most challenging part of this program is
-determining whether or not you have a good Sudoku configuration.  One suggestion would be to keep track of a
-variable that counts the number of things that are invalid and, if that variable's value is 0 at the end of the program,
-you have a valid Sudoku board. Please see the instructor if you have questions about these matters.
+row, and so on.  Once you validate that one row is ``good'' or ``not good'', the rest of the program should essentially
+be a matter of ``copy and paste'', replacing variables where appropriate.  The most challenging part of this program is
+determining whether or not you have a good Sudoku configuration.  One suggestion would be to keep track of a variable
+that counts the number of things that are invalid and, if that variable's value is 0 at the end of the program, you have
+a valid Sudoku board. Please see the instructor if you have questions about these matters.
 
-\vspace{-0.2in}
+\vspace{-0.1in}
 \subsection*{Additional Program Requirements}
 \vspace{-0.05in}
 \begin{itemize}
-\item Make sure your program prints your name, the lab number, and the date. 
-\item Make sure your program contains the comment header with the Honor Code pledge, your name, lab number, date, and the purpose of the program. 
-\item Make sure your program is documented properly, with descriptive and useful comments throughout your program whenever appropriate. 
-\item Make sure your output
-  is neat (e.g., no missing spaces and no typos) and that your program is neatly formatted (e.g., the indenting is correct).
+
+\itemsep0in
+
+\item Make sure your program prints your name, the lab number, and the date.
+
+\item Make sure your program contains the comment header with the Honor Code pledge, your name, lab number, date, and
+  the purpose of the program.
+
+\item Make sure your program's source code is documented properly, with descriptive and useful comments throughout your
+  program whenever appropriate.
+
+\item Make sure your output is neat (e.g., no missing spaces and no typos) and that your program is neatly formatted
+  (e.g., the indenting is correct).
+
 \item \textbf{You may not use array structures or loops for this assignment.}
+
 \end{itemize}
 
 \vspace{-0.2in}
-\subsection*{Required Deliverables}
+\subsection*{Summary of the Required Deliverables}
 \vspace{-0.05in}
 
 For this assignment you are invited to submit versions of the following deliverables through both the Bitbucket
@@ -243,13 +259,13 @@ repository and in a printed and signed format.
   \item Completed and properly formatted {\tt SudokuChecker.java} and {\tt SudokuCheckerMain.java} files.
 
   \item An output file containing outputs obtained from running {\tt SudokuCheckerMain} five times.
-        
+
 \end{enumerate}
 \vspace{-0.05in}
 
 \noindent As you complete this step, you should make sure that you created a {\tt lab8/} directory within your Git
 repository.  Then, you can save all of the required deliverables in the {\tt lab8/} directory---please see the course
-instructor or a teaching assistant if you are not able to create your directory properly. 
+instructor or a teaching assistant if you are not able to create your directory properly.
 
 \noindent In addition to turning in signed and printed copies of your code and output, share your source code and the output
 file with me through your Git repository by correctly using the ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
@@ -267,7 +283,7 @@ In adherence to the Honor Code, students should complete this assignment on an i
 for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
 carefully between the student who discusses the principles underlying a problem with others and the student who produces
 assignments that are identical to, or merely variations on, someone else's work.  Deliverables that are nearly identical
-to the work of others will be taken as evidence of violating the \mbox{Honor Code}.  
+to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.
 
 \end{document}
 
