@@ -5,6 +5,7 @@
 
 \subsection*{Summary}
 \vspace*{-.05in}
+
 In this practical you will write a Java program that will allow the user to guess a number. To complete this task you will use {\tt while} loops and {\tt if/else} statements.  Then, using the ``{\tt git add}'', ``{\tt git  commit}'', and ``{\tt git push}'' commands you will
 upload your modified source code files and the output you obtain from running your program to your Git repository hosted
 by Bitbucket.
@@ -15,21 +16,22 @@ by Bitbucket.
 
 You may refer to sections 5.1--5.4 in your textbook to learn more about {\tt if/else} statements and {\tt while} loops.
 You may also refer to the section in this document called ``The {\tt while} Loop Overview'' for an example of using a
-{\tt while} loop in a Java program. Please see the course instructor or a teaching assistant if you have questions about
-the concepts underlying iteration or recursion or if you are unsure of how to realize the fundamental ideas in a Java
+{\tt while} loop in a Java program. To review the details about random number generation and the {\tt java.util.Random}
+class, you can study Section 3.4. Please see the course instructor or a teaching assistant if you have questions about
+the concepts underlying iteration or recursion or if you are unsure of how to realize these fundamental ideas in a Java
 program.
 
 \vspace*{-.1in}
 \subsection*{Guessing Game}
 \vspace*{-.05in}
-Write a Java program that will play a guessing game with the user of the program.
-The user must try to guess a number between $1$ and $100$. If the user's
-guess is wrong, print out a helpful hint, such as ``that's too high'' or
-``that's too low''. Keep repeating this until the user guesses correctly.
+
+Write a Java program that will play a guessing game with the user of the program.  The user must try to guess a number
+between $1$ and $100$. If the user's guess is wrong, print out a helpful hint, such as ``that's too high'' or ``that's
+too low''. Keep repeating this until the user guesses correctly.
 
 Your Java program should complete the following tasks:
 \begin{itemize}
-\item Print your name, practical number, and the date.
+  \item Print your name, practical number, and the date (so, remember to use ``{\tt new Date()}'').
 \item
 Declare and initialize a variable of type {\tt int} to be equal to some
 randomly generated number in the range between 1 and 100; this is the correct answer that the user will try to guess.
