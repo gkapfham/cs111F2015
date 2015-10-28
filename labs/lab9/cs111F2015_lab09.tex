@@ -1,0 +1,255 @@
+%!TEX root=cs111F2014-lab09.tex
+% mainfile: cs111F2014-lab09.tex
+
+\input{111pre}
+\begin{document}
+\MYTITLE{Lab 9 for Sections 03 and 04 \\ 6 November 2014\\
+Due Thursday, 13 November by 2:30pm }
+
+\vspace{-0.2in}
+\subsection*{Objectives}
+\vspace{-0.05in}
+
+To further enhance your experience with designing, implementing, and enhancing Java methods, including the completion of
+tasks such as creating and calling methods that use boolean expressions, complex conditional logic, and iteration
+constructs.  Additionally, to practice using Java methods that read input from a text file with the {\tt
+  java.util.Scanner}.
+
+\vspace{-0.15in}
+\subsection*{General Guidelines for Labs}
+\vspace{-0.05in}
+
+\begin{itemize}
+\item
+{\bf Work on the Alden Hall computers.} If you want to work on a different
+machine, be sure to transfer your programs to the Alden
+machines and re-run them before submitting.
+\item
+  {\bf Update your repository often!} You should {\tt add}, {\tt commit}, 
+  and {\tt push} your updated files each time you work on them.  I will not grade 
+your programs until the due date has passed.
+\item
+{\bf Review the Honor Code policy.} You
+may discuss programs with others, but programs that are nearly identical
+to others' will be taken as evidence of violating the Honor Code.
+\end{itemize}
+
+\vspace{-0.15in}
+\subsection*{Reading Assignment}
+\vspace{-0.05in}
+
+To continue to learn more about ``{\tt if/else if/else}'' statements and boolean expressions, please again review
+Sections 5.1--5.3. Since this assignment will also require you to continue to use Java classes and methods, you should
+once again review Sections 4.1--4.5.  To best prepare for the new content in this laboratory assignment, you should also
+study Sections 5.4--5.6, paying particularly close attention to the material about {\tt while} loops, {\tt break} and
+{\tt continue} statements, text file input, iterators, and the {\tt java.util.ArrayList} class. Students who are not
+familiar with text-based todo list management tools are encouraged to review, as an example, \url{http://todotxt.com/}.
+
+\vspace{-0.1in}
+\subsection*{Create a New Directory and Starting the Project}
+\vspace{-0.05in}
+
+After changing into the ``{\tt cs111F2014-share/}'' directory, which contains our course's version control repository,
+you should type the command ``{\tt git pull}'' to download the source code for this laboratory assignment.  In your own
+``{\tt cs111F2014-<your user name>}'' repository inside the ``{\tt labs/}'' directory, create a directory called ``{\tt
+  lab9}''. Using the method described in a previous laboratory assignment, please copy the source code from the share
+repository to your own repository. Now, change into the ``{\tt labs/lab9/}'' directory, in your own Git repository, and
+use ``{\tt gvim}'' to study the source code of the provided files. What methods do these classes provide? How do they
+work? 
+
+The Java classes that you have downloaded provide the preliminary features for a complete todo list manager program. As
+part of this assignment, you will document all of the provided source code and then add new methods that furnish new
+features.  Then, you will run this program multiple times to demonstrate the correctness of the finished system. To
+start this assignment, it is a good idea to draw diagrams like the ones in Figures 4.4 and 4.7 of the textbook to
+understand the classes involved in the program and the flow of control between method invocations. Next, to understand
+the structure of the {\tt TodoList} class, you may want to use the Lightweight Java Visualizer (LJV), as explained in a
+previous assignment, to create a diagram of its structure in the computer's memory.
+
+\vspace{-0.1in}
+\subsection*{Understanding the Todo List Manager}
+\vspace{-0.05in}
+
+The current implementation of the todo list manager reads from a file called ``{\tt todo.txt}'', an example of which is
+included below this paragraph. An individual line in the ``{\tt todo.txt}'' file always adheres to the format
+``Priority, Category, Task'' where ``{\tt A}'' is the most important priority (with ``{\tt B}'' being the next level,
+  and so on), ``{\tt Understand}'' being an example of a category, and ``{\tt Use the LJV to see the TodoList}'' is a
+task.  Following this format for a task, you should consider adding in all of items that you must complete in order to
+successfully finish this laboratory assignment. That is, you can actually use your todo list manager to assist you as
+you complete both this project, later practical and laboratory assignments, and the upcoming final project!
+
+\vspace{-0.05in}
+\begin{verbatim}
+A,Understand,Draw diagram(s) to explain classes
+A,Understand,Use the LJV to see TodoList
+B,Explain,Add comments to all of the Todo classes 
+\end{verbatim}
+\vspace{-0.05in}
+
+\vspace{-0.15in}
+\subsection*{Implementing New Features}
+\vspace{-0.05in}
+
+The final version of your todo list manager should provide features to read the todo list, search for specific tasks
+according to both priority and category, mark a task as done, and list all of the current tasks.  Currently, the system
+does not include the source code to implement the priority-search and category-search features. Yet, you can see
+from the following output that the todo list manager can already read the todo list from the file, mark a task as done,
+list the existing tasks, and stop running the program. Can you also compile and run this program and produce this
+output?
+
+\vspace{-0.05in}
+\begin{verbatim}
+Welcome to the Todo List Manager!
+What operation would you like to perform?
+Available options: read, priority-search, category-search, done, list, quit
+read
+list
+0, A,  Understand,  Draw diagram(s) to explain classes, done? false
+1, A,  Understand,  Use the LJV to see TodoList, done? false
+2, B,  Explain,  Add comments to all of the Todo classes , done? false
+done
+What is the id of the task?
+1
+list
+0, A,  Understand,  Draw diagram(s) to explain classes, done? false
+1, A,  Understand,  Use the LJV to see TodoList, done? true
+2, B,  Explain,  Add comments to all of the Todo classes , done? false
+quit
+\end{verbatim}
+\vspace{-0.05in}
+
+To complete this assignment, you are responsible for adding all of the source code that is needed to implement the
+priority-search and category-search features. This means that you will first have to add code that can determine when 
+the user has input the word ``{\tt priority-search}'' or ``{\tt category-search}''---what file should contain this
+code?  Please notice that you will need to finish implementing the methods that perform these operations! Both of these
+operations will involve you using a {\tt java.util.Iterator} to iterate through all of the instances of the {\tt
+  TodoItem} class. 
+
+When you are performing a priority-search, you will need to collect and return all of the {\tt TodoItem}s that match the
+provided priority level.  For instance, using the example todo list on the previous page, a request for the ``{\tt A}''
+priority tasks would return those with {\tt id} values of zero and one. Similarly, the use of the category-search operation
+will require you to iterate through all of the {\tt TodoItem}s managed by a {\tt TodoList} as you find those that match
+the requested category. Again using the aforementioned example todo list, this operation would also return the first two tasks.
+The {\tt markTaskAsDone} method, as shown below, gives a concrete example of how to iterate through the {\tt todoItems}
+and use conditional logic to check if a specific {\tt todoItem} has the requested {\tt toMarkId}. You can use this
+method as an inspiration for those methods that you must implement.
+
+\vspace{-0.1in}
+\begin{verbatim}
+    public void markTaskAsDone(int toMarkId) {
+        Iterator iterator = todoItems.iterator();
+        while(iterator.hasNext()) {
+            TodoItem todoItem = (TodoItem)iterator.next();
+            if(todoItem.getId() == toMarkId) {
+                todoItem.markDone();
+            }
+        }
+    }
+\end{verbatim}
+
+% Students who would like to further enhance their todo list manager should think about adding additional features to
+% their program.  For example, can you save the modified list back to the ``{\tt todo.txt}'' file?
+
+\vspace{-0.3in}
+\subsection*{Required Deliverables}
+\vspace{-0.05in}
+
+For this assignment you are invited to submit versions of the following deliverables through both the Bitbucket
+repository and in a printed and signed format.
+
+\vspace{-0.1in}
+\begin{enumerate}
+    \setlength{\itemsep}{0pt}
+
+  \item Completed, fully commented, and properly formatted versions of the three source code files.
+  \item An output file, called {\tt output}, containing outputs from five runs of {\tt TodoListMain}.
+  \item The final version of the {\tt todo.txt} file that you used to both test and complete this lab.
+  \item A written reflection, saved in {\tt reflection}, about the challenges you faced during this lab.
+        
+\end{enumerate}
+\vspace{-0.1in}
+
+In addition to turning in signed and printed copies of your code and output, share your source code and other required
+files with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
+  push}'' commands. When you are done, please ensure that the Bitbucket Web site has a ``{\tt lab9/}'' directory in your
+repository with the three Java files in the list of deliverables and the other files. Please see the instructor if
+you have questions about assignment submission.
+
+% In addition to turning in signed and printed copies of your code and output, please share your program and the output
+% file with me through your Git repository by correctly using the ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
+% push}'' commands. When you are done, please ensure that the Bitbucket Web site has a {\tt lab8/} directory in your
+% repository with the four files called {\tt Lab8.java}, {\tt Lab8Main.java}, and {\tt output}. You
+% should see the instructor or a teaching assistant if you have questions about submitting this assignment.
+
+In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
+for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
+carefully between the student who discusses the principles underlying a problem with others and the student who produces
+assignments that are identical to, or merely variations on, someone else's work.  Deliverables that are nearly identical
+to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.  
+
+\end{document}
+
+\begin{verbatim}
+Sample Run
+
+Welcome to the Sudoku Checker v1.0!
+
+This program checks simple, small, 4x4 Sudoku grids for correctness. Each column, row and 2x2 region contains the numbers 1 through 4 only once.
+
+To check your Sudoku, enter your board one row at a time, with each digit separated by a space.  Hit ENTER at the end of a row.
+
+Enter Row 1: 1 2 3 4
+Enter Row 2: 3 4 2 1
+Enter Row 3: 1 2 3 4
+Enter Row 4: 4 3 2 1
+
+Thank you.  Now checking ...
+
+REG-1:GOOD
+REG-2:GOOD
+REG-3:GOOD
+REG-4:GOOD
+ROW-1:GOOD
+ROW-2:GOOD
+ROW-3:GOOD
+ROW-4:GOOD
+COL-1:BAD
+COL-2:BAD
+COL-3:GOOD
+COL-4:GOOD
+
+SUDO:INVALID
+
+
+
+Sample Run
+Welcome to the Sudoku Checker v1.0!
+
+This program checks simple, small, 4x4 Sudoku grids for correctness. Each column, row and 2x2 region contains the numbers 1 through 4 only once.
+
+To check your Sudoku, enter your board one row at a time, with each digit separated by a space.  Hit ENTER at the end of a row.
+
+Enter Row 1: 3 2 4 1
+Enter Row 2: 4 1 3 2
+Enter Row 3: 1 4 2 3
+Enter Row 4: 2 3 1 4
+
+REG-1:GOOD
+REG-2:GOOD
+REG-3:GOOD
+REG-4:GOOD
+ROW-1:GOOD
+ROW-2:GOOD
+ROW-3:GOOD
+ROW-4:GOOD
+COL-1:GOOD
+COL-2:GOOD
+COL-3:GOOD
+COL-4:GOOD
+
+SUDO:VALID
+
+\end{verbatim}
+
+
+
+\end{document}
