@@ -1,10 +1,7 @@
-%!TEX root=cs111F2014-lab10.tex
-% mainfile: cs111F2014-lab10.tex
-
 \input{111pre}
 \begin{document}
-\MYTITLE{Lab 10 for Sections 03 and 04 \\ 13 November 2014\\
-Due Thursday, 20 November by 2:30pm }
+\MYTITLE{Lab 10 \\ 11 November 2015\\
+Due Wednesday, 18 November by 2:30pm }
 
 \vspace{-0.2in}
 \subsection*{Objectives}
@@ -20,18 +17,16 @@ time of a Java program.
 \vspace{-0.05in}
 
 \begin{itemize}
-\item
-{\bf Work on the Alden Hall computers.} If you want to work on a different
-machine, be sure to transfer your programs to the Alden
-machines and re-run them before submitting.
-\item
-  {\bf Update your repository often!} You should {\tt add}, {\tt commit}, 
-  and {\tt push} your updated files each time you work on them.  I will not grade 
-your programs until the due date has passed.
-\item
-{\bf Review the Honor Code policy.} You
-may discuss programs with others, but programs that are nearly identical
-to others' will be taken as evidence of violating the Honor Code.
+
+\item {\bf Work on the Alden Hall computers.} If you want to work on a different machine, be sure to transfer your
+  programs to the Alden machines and re-run them before submitting.
+
+\item {\bf Update your repository often!} You should {\tt add}, {\tt commit}, and {\tt push} your updated files each
+  time you work on them.  I will not grade your programs until the due date has passed.
+
+\item {\bf Review the Honor Code policy.} You may discuss programs with others, but programs that are nearly identical
+  to others' will be taken as evidence of violating the Honor Code.
+
 \end{itemize}
 
 \vspace{-0.25in}
@@ -39,19 +34,19 @@ to others' will be taken as evidence of violating the Honor Code.
 \vspace{-0.05in}
 
 Review Section 6.4 to learn more about the structure and behavior of the {\tt for} loop construct provided by the Java
-programming language, paying close attention to the three key parts of the {\tt for} loop's declaration. Additionally,
+programming language, paying close attention to the three key parts of the {\tt for} loop's declaration.  Additionally,
 please review Section 5.4 to refresh your knowledge of the {\tt while} loop. To learn more about fractals, and the
 Mandelbrot set that we will visualize in this laboratory assignment, please study the following Web site available at
-\url{http://jonisalonen.com/2013/lets-draw-the-mandelbrot-set/}. Students who have never explored the concept of
+\url{http://jonisalonen.com/2013/lets-draw-the-mandelbrot-set}.  Students who have never explored the concept of
 fractals are also encouraged to review \url{http://en.wikipedia.org/wiki/Mandelbrot_set}.
 
 \vspace{-0.1in}
 \subsection*{Create a New Directory and Starting the Project}
 \vspace{-0.05in}
 
-After changing into the ``{\tt cs111F2014-share/}'' directory, which contains our course's version control repository,
+After changing into the ``{\tt cs111F2015-share/}'' directory, which contains our course's version control repository,
 you should type the command ``{\tt git pull}'' to download the source code for this laboratory assignment.  In your own
-``{\tt cs111F2014-<your user name>}'' repository inside the ``{\tt labs/}'' directory, create a directory called ``{\tt
+``{\tt cs111F2015-<your user name>}'' repository inside the ``{\tt labs/}'' directory, create a directory called ``{\tt
   lab10}''. Using the method described in a previous laboratory assignment, please copy the source code from the share
 repository to your own repository. Now, change into the ``{\tt labs/lab10/}'' directory, in your own Git repository, and
 use ``{\tt gvim}'' to study the source code of the provided files. What methods do these classes provide? How do they
@@ -60,7 +55,7 @@ comments that highlight the basic points about how this program operates. Studen
 should ask the instructor for assistance.
 
 \vspace{-0.1in}
-\subsection*{Understanding and Evaluating a Fractal Generator}
+\subsection*{Understanding and Empirically Evaluating a Fractal Generator}
 \vspace{-0.05in}
 
 Once you have developed a basic understanding of the {\tt MandelbrotBW.java} and {\tt MandelbrotColor.java} files, you
@@ -73,12 +68,12 @@ in your terminal window.  What do you now see on the screen? What are the charac
 Please use {\tt gvim} to display and edit the source code of the {\tt MandelbrotColor.java} file, noticing that it
 declares an {\tt int} variable called {\tt max} and initializes it to the value of $1000$. How does the value of this
 variable influence the time taken to create the Mandelbrot graphic? To answer this question, you can change the value of
-max to, for instance, $100$, and recompile and run ``{\tt /usr/bin/time java MandelbrotColor}'' in your terminal.  After
-running this command, the number that is postfixed with the ``{\tt user}'' label will give the amount of time need to create
-the fractal. As part of this assignment, you should set the {\tt max} variable to take on the values of $10, 100, 1000,
-\mbox{and}, \- 10000$, timing the execution with {\tt /usr/bin/time} and using {\tt xdg-open} to see how this changes the
-resulting visualization. Along with recording the execution time for each program configuration, you should save each
-distinct graphic with a unique name and upload it to your repository.
+max to, for instance, $100$, and recompile and run ``{\tt /usr/bin/time java MandelbrotColor}'' in your terminal.
+After running this command, the number that is postfixed with the ``{\tt user}'' label will give the amount of time need
+to create the fractal. As part of this assignment, you should set the {\tt max} variable to take on the values of $10,
+100, 1000, \mbox{and}, \- 10000$, timing the execution with {\tt /usr/bin/time} and using {\tt xdg-open} to see how this
+changes the resulting visualization. Along with recording the execution time for each program configuration, you should
+save each distinct graphic with a unique name and upload it to your Bitbucket repository.
 
 Now, find the line in the {\tt MandelbrotColor.java} file that is written in the following fashion:
 
@@ -110,25 +105,13 @@ repository and in a signed and printed format; do not print the color Mandelbrot
   \item A written report, saved in {\tt time}, explaining the trends in your Mandelbrot data tables.
   \item A written report, saved in {\tt color}, discussing how the Mandelbrot graphic changes.
   \item A written reflection, saved in {\tt reflection}, about the challenges you faced during this lab.
-        
+
 \end{enumerate}
 \vspace{-0.1in}
 
 % \noindent
 Please make sure that you use the appropriate {\tt git} commands to save all of these required deliverables in the
 ``{\tt lab10/}'' directory of your Git repository hosted by Bitbucket.
-
-% In addition to turning in signed and printed copies of your code and output, share your source code and other required
-% files with me through your Git repository by correctly using ``{\tt git add}'', ``{\tt git commit}'', and ``{\tt git
-%   push}'' commands. When you are done, please ensure that the Bitbucket Web site has a ``{\tt lab10/}'' directory in your
-% repository with the three Java files in the list of deliverables and the other files. Please see the instructor if
-% you have questions about lab submission.
-
-% In adherence to the Honor Code, students should complete this assignment on an individual basis. While it is appropriate
-% for students in this class to have high-level conversations about the assignment, it is necessary to distinguish
-% carefully between the student who discusses the principles underlying a problem with others and the student who produces
-% assignments that are identical to, or merely variations on, someone else's work.  Deliverables that are nearly identical
-% to the work of others will be taken as evidence of violating Allegheny College's \mbox{Honor Code}.  
 
 \end{document}
 
